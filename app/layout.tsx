@@ -20,7 +20,7 @@ export default function RootLayout({
         <Header />
         <main className="min-h-[90vh] relative">
           {children}
-          <ParticlesComponent />
+          <ParticlesComponent  id={'urfan'}/>
         </main>
       </body>
     </html>
