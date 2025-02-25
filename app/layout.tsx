@@ -16,11 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-roboto">
+      <body className="font-roboto bg-myBlue overflow-x-hidden">
         <Header />
         <main className="min-h-[90vh] relative">
           {children}
-          <ParticlesComponent  id={'urfan'}/>
+          <ParticlesComponent id={'urfan'} />
         </main>
       </body>
     </html>

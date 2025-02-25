@@ -12,6 +12,7 @@ export default {
     },
     screens: {
       'sm': '400px',
+      'ur': '530px',
       'md': '768px',
       'lg': '1024px',
       'xl': '1220px',
@@ -31,6 +32,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        myWhite: '#f5f5f5',
+        myBlack: "#1b1b1b",
+        myYellow: "#ff4f08",
+        myBlue: "#1E2F97",
       },
     },
   },

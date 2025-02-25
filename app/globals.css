@@ -2,9 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.text-shadow {
+.ant-drawer-content {
+  background-color: #1E2F97 !important; 
+}
+*{
   text-shadow: 5px 5px 10px #2b2a2a;
+}
+
+.light-shadow {
+  text-shadow: 5px 5px 10px #2b2a2a;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
 }
 
 #particles canvas {

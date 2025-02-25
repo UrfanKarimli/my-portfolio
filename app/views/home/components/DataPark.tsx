@@ -6,22 +6,22 @@ import { SiShadcnui, SiTypescript } from 'react-icons/si'
 
 export default function DataPark() {
     return (
-        <div className='relative w-full bg-[#f5f5f5] flex flex-col lg:flex-row items-center justify-between p-6  my-10  border border-[#1b1b1b] rounded-2xl'>
-            <div className=' basis-[49%] rounded-md overflow-hidden'>
+        <div className='relative w-full bg-myWhite flex flex-col lg:flex-row items-center justify-between p-6  my-10  border border-myBlack rounded-2xl'>
+            <div className='w-full lg:basis-[49%] rounded-md overflow-hidden'>
                 <a href={`https://data-park-demo.vercel.app/`} target='_blank' className=' h-full w-full  '>
                     <Image src={'/datapark.png'} alt="" width={750} height={535} className='  w-full h-full  object-cover object-center transition transform duration-300 ease-in-out hover:scale-105' />
                 </a>
             </div>
-            <div className=' basis-[49%]  flex flex-col gap-2'>
-                <h2 className='text-[#f7941d] text-[40px]  font-semibold'>Data park</h2>
-                <p className=' text-[#355474]'>
-                    I developed the entire front-end of The <em>Data Park</em>
+            <div className=' lg:basis-[49%] mt-4 lg:mt-0  flex flex-col gap-2'>
+                <h2 className='text-[#f7941d] text-2xl sm:text-[30px] lg:text-[40px]  font-semibold'>Data park</h2>
+                <p className='text-sm sm:text-base text-[#355474]'>
+                    I developed the entire front-end of The <em>Data Park </em>
                     platform, which was designed as a hub for data academies,
                     consulting firms, startups, the CDO club, job vacancies,
                     talent pools, data science events and meetups, research,
                     and the latest industry news.
                 </p>
-                <div className=' flex flex-wrap gap-2'>
+                <div className='text-sm sm:text-base flex flex-wrap gap-2'>
                     <span className=' py-1.5 px-3  rounded-[20px] text-[#087ea4] bg-[#e6f7ff] flex items-center gap-1 text-sm '>
                         <FaReact />
                         React.js
