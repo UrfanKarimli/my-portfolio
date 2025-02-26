@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { Carousel } from "antd";
 import type { CarouselRef } from "antd/es/carousel";
+import { motion, useInView } from "framer-motion"
 import Banner from "./components/Banner";
 import DataPark from "./components/DataPark";
 import TapAz from "./components/TapAz";
@@ -10,9 +11,33 @@ import VueCommerce from "./components/VueCommerce";
 import VueDashboard from "./components/VueDashboard";
 import BlankSpace from "./components/BlankSpace";
 
+
 export default function HomePage() {
     const carouselRef = useRef<CarouselRef>(null);
     const [isScrolling, setIsScrolling] = useState(false);
+    const ref1 = useRef(null)
+    const ref2 = useRef(null)
+    const ref3 = useRef(null)
+    const ref4 = useRef(null)
+    const ref5 = useRef(null)
+    const ref6 = useRef(null)
+    const ref7 = useRef(null)
+    const ref8 = useRef(null)
+    const ref9 = useRef(null)
+    const ref10 = useRef(null)
+    const ref11 = useRef(null)
+    const inView1 = useInView(ref1)
+    const inView2 = useInView(ref2)
+    const inView3 = useInView(ref3)
+    const inView4 = useInView(ref4)
+    const inView5 = useInView(ref5)
+    const inView6 = useInView(ref6)
+    const inView7 = useInView(ref7)
+    const inView8 = useInView(ref8)
+    const inView9 = useInView(ref9)
+    const inView10 = useInView(ref10)
+    const inView11 = useInView(ref11)
+
     const scrollSensitivity = 50;
 
     const handleScroll = (event: React.WheelEvent) => {
@@ -32,6 +57,8 @@ export default function HomePage() {
         }, 1000);
     };
 
+
+
     return (
         <div className="z-20 sticky bottom-0 px-5 " >
             <div className=" hidden lg:block " onWheel={handleScroll}>
@@ -41,35 +68,135 @@ export default function HomePage() {
                     speed={1000}
                     infinite={false}
                 >
-                    <div className="h-[90vh] w-full flex items-center justify-center lg:px-9 ">
+                    <div className="h-[90vh] w-full flex items-center justify-center lg:px-9 overflow-y-hidden ">
+                        <motion.div
+                            ref={ref1}
+                            initial={{ y: 250, opacity: 0 }}
+                            animate={inView1 ? { y: 0, opacity: 1 } : { y: 250, opacity: 0 }}
+                            transition={{ duration: 0.8 }}
+                            viewport={{ once: false }}
+                            className=""
+                        >
+                        </motion.div>
                         <Banner />
                     </div>
-                    <div className="h-[90vh] flex items-center justify-center lg:px-9">
-                        <DataPark />
+                    <div className="h-[90vh] flex items-center justify-center lg:px-9 overflow-x-hidden">
+                        <motion.div
+                            ref={ref2}
+                            initial={{ rotateX: 180, rotateY: 180 }}
+                            animate={inView2 ? { rotateX: 0, rotateY: 0 } : { rotateX: 180, rotateY: 180 }}
+                            transition={{ duration: 1 }}
+                            viewport={{ once: false }}
+                            className=""
+                        >
+                            <DataPark />
+                        </motion.div>
                     </div>
-                    <div className="h-[90vh] flex items-center justify-center lg:px-9 ">
-                        <TapAz />
+                    <div className="h-[90vh] flex items-center justify-center lg:px-9 overflow-x-hidden">
+                        <motion.div
+                            ref={ref3}
+                            initial={{ rotateY: 180 }}
+                            animate={inView3 ? { rotateY: 0 } : { rotateY: 180 }}
+                            transition={{ duration: 1 }}
+                            viewport={{ once: false }}
+                            className=""
+                        >
+                            <TapAz />
+                        </motion.div>
                     </div>
-                    <div className="h-[90vh] flex items-center justify-center lg:px-9">
-                        <BlankSpace />
+                    <div className="h-[90vh] flex items-center justify-center lg:px-9 overflow-x-hidden">
+                        <motion.div
+                            ref={ref4}
+                            initial={{ rotateX: 180 }}
+                            animate={inView4 ? { rotateX: 0 } : { rotateX: 180 }}
+                            transition={{ duration: 1 }}
+                            viewport={{ once: false }}
+                            className=""
+                        >
+                            <BlankSpace />
+                        </motion.div>
                     </div>
-                    <div className="h-[90vh] flex items-center justify-center lg:px-9 ">
-                        <VueDashboard />
+                    <div className="h-[90vh] flex items-center justify-center lg:px-9 overflow-x-hidden ">
+                        <motion.div
+                            ref={ref5}
+                            initial={{ opacity: 0, scale: 0.5 }}
+                            animate={inView5 ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }}
+                            transition={{ duration: 1, }}
+                            viewport={{ once: false }}
+                            className=""
+                        >
+                            <VueDashboard />
+                        </motion.div>
                     </div>
-                    <div className="h-[90vh] flex items-center justify-center lg:px-9 ">
-                        <VueCommerce />
+                    <div className="h-[90vh] flex items-center justify-center lg:px-9 overflow-x-hidden">
+                        <motion.div
+                            ref={ref6}
+                            initial={{ rotate: -45 }}
+                            animate={inView6 ? { rotate: 0 } : { rotate: -45 }}
+                            transition={{ duration: 0.5, }}
+                            viewport={{ once: false }}
+                            className=""
+                        >
+                            <VueCommerce />
+                        </motion.div>
                     </div>
                 </Carousel>
             </div>
-            <div className=" lg:hidden">
+            <div className=" lg:hidden overflow-x-hidden">
                 <div className=" h-[40vh] sm:h-[50vh] ur:h-[70vh] w-full flex items-center justify-center ">
                     <Banner />
                 </div>
-                <DataPark />
-                <TapAz />
-                <BlankSpace />
-                <VueDashboard />
-                <VueCommerce />
+                <motion.div
+                    ref={ref7}
+                    initial={{ y: 250, opacity: 0 }}
+                    animate={inView7 ? { y: 0, opacity: 1 } : { y: 250, opacity: 0 }}
+                    transition={{ duration: 0.8, delay: 0.5 }}
+                    viewport={{ once: false }}
+                    className=""
+                >
+                    <DataPark />
+                </motion.div>
+                <motion.div
+                    ref={ref8}
+                    initial={{ x: 300, opacity: 0 }}
+                    animate={inView8 ? { x: 0, opacity: 1 } : { x: 300, opacity: 0 }}
+                    transition={{ duration: 0.8, delay: 0.5 }}
+                    viewport={{ once: false }}
+                    className=""
+                >
+                    <TapAz />
+                </motion.div>
+                <motion.div
+                    ref={ref9}
+                    initial={{ x: -300, opacity: 0 }}
+                    animate={inView9 ? { x: 0, opacity: 1 } : { x: -300, opacity: 0 }}
+                    transition={{ duration: 0.8, delay: 0.5 }}
+                    viewport={{ once: false }}
+                    className=""
+                >
+                    <BlankSpace />
+                </motion.div>
+                <motion.div
+                    ref={ref10}
+                    initial={{ scaleX: 0.2, opacity: 0 }}
+                    animate={inView10 ? { scaleX: 1, opacity: 1 } : { scaleX: 0.2, opacity: 0 }}
+                    transition={{ duration: 1, bounce: 0.3, delay: 0.6 }}
+                    viewport={{ once: false }}
+                    className=""
+                >
+                    <VueDashboard />
+                </motion.div>
+                <motion.div
+                    ref={ref11}
+                    initial={{ scaleY: 0.2, opacity: 0 }}
+                    animate={inView11 ? { scaleY: 1, opacity: 1 } : { scaleY: 0.2, opacity: 0 }}
+                    transition={{ duration: 1 , bounce: 0.3,  delay: 0.6 }}
+                    viewport={{ once: false }}
+                    className=""
+                >
+                    <VueCommerce />
+                </motion.div>
+                
             </div>
         </div>
     );

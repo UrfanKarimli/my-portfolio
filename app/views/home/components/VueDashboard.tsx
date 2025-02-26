@@ -7,7 +7,7 @@ export default function VueDashboard() {
     return (
         <div className='relative w-full bg-myWhite flex flex-col-reverse lg:flex-row items-center justify-between p-6  my-10  border border-myBlack rounded-2xl'>
             <div className=' lg:basis-[49%] mt-4 lg:mt-0 flex flex-col gap-5'>
-                <h2 className=' text-2xl sm:text-[30px] lg:text-[40px]   text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600 font-bold font-poppins'>Vue Commerce</h2>
+                <h2 className=' text-2xl sm:text-[30px] lg:text-[40px]   text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600 font-bold font-poppins'>Vue Dashboard</h2>
                 <p className='text-sm sm:text-base text-[#030712]'>
                     This project aims to enhance my skills in <em>Vue.js</em> by building a <em>Dashboard</em> application. It utilizes modern technologies such as <em>Vite</em>, <em>Tailwind CSS</em>, and <em>PrimeVue</em>.
                 </p>
