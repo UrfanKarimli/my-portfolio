@@ -38,7 +38,7 @@ export default function Header() {
           <IoMenu  className='text-2xl text-myWhite '/>
           </button>
           <Drawer  width={150}  onClose={onClose} open={open} className=' ant-drawer-content'>
-            <ul className=' flex flex-col items-center space-y-4'>
+            <ul onClick={()=>{setOpen(false)}} className=' flex flex-col items-center space-y-4'>
               <li>
                 <Link href='/' className='font-semibold text-myWhite '>Home</Link>
               </li>

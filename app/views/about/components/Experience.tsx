@@ -9,11 +9,11 @@ export default function Experience() {
             </div>
             <div className='relative w-full bg-myWhite flex flex-col gap-4  items-center  p-6  py-16 my-10  border border-myBlack rounded-2xl'>
                 <div className=' md:w-[560px] flex flex-col items-start gap-1'>
-                    <h3 className=' flex flex-wrap text-xl ur:text-2xl font-bold'>Front-End Developer  <span className=' text-myBlack shadow-none ml-1 '>  @QSS Analytics</span></h3>
+                    <h3 className=' flex flex-wrap text-xl ur:text-2xl text-myBlack font-bold'>Front-End Developer  <span className=' text-myBlack shadow-none ml-1 '>  @QSS Analytics</span></h3>
                     <span className='text-xs sm:text-base text-[#1b1b1bbf]'>04/2024 - 12/2024 | Baku, Azerbaijan
                     </span>
-                    <span>Achievements/Tasks</span>
-                    <div className=' ml-5 text-sm sm:text-base'>
+                    <span className='text-myBlack'>Achievements/Tasks</span>
+                    <div className='text-myBlack ml-5 text-sm sm:text-base'>
                         <ul>
                             <li className=' list-disc'>Review colleagues&apos; codes and provide feedback to improve
                                 code quality</li>
@@ -25,11 +25,11 @@ export default function Experience() {
                     </div>
                 </div>
                 <div className=' md:w-[560px] flex flex-col items-start gap-1'>
-                    <h3 className=' flex flex-wrap text-xl ur:text-2xl font-bold'>Front-End Developer Intern<span className=' text-myBlack ml-1'>@QSS Analytics</span></h3>
+                    <h3 className=' flex flex-wrap text-xl ur:text-2xl font-bold text-myBlack'>Front-End Developer Intern<span className=' text-myBlack ml-1'>@QSS Analytics</span></h3>
                     <span className='text-xs sm:text-base text-[#1b1b1bbf]'>01/2024 - 04/2024 | Baku, Azerbaijan
                     </span>
-                    <span>Achievements/Tasks</span>
-                    <div className=' ml-5 text-sm sm:text-base'>
+                    <span className='text-myBlack'>Achievements/Tasks</span>
+                    <div className=' ml-5 text-sm sm:text-base text-myBlack'>
                         <ul>
                             <li className=' list-disc'>Optimizing and developing the architectural design
                                 according to the requirements of the projects. </li>

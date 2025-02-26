@@ -27,7 +27,7 @@ export default function Education() {
                         <h4 className=' text-lg sm:text-xl font-semibold text-myBlack'> Azerbaijan State University of Economics </h4>
                         <span className='text-xs sm:text-base text-[#1b1b1bbf]'>09/2014 - 06/2018 | Baku, Azerbaijan
                         </span>
-                        <span>Bachelor degree</span>
+                        <span className='text-myBlack'>Bachelor degree</span>
                     </div>
                 </div>
 
