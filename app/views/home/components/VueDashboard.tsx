@@ -1,15 +1,18 @@
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { FaVuejs } from 'react-icons/fa'
 import { RiTailwindCssFill } from 'react-icons/ri'
 import { SiJavascript, SiPrimefaces, } from 'react-icons/si'
 
 export default function VueDashboard() {
+    const t = useTranslations("landing")
+
     return (
         <div className='relative w-full bg-myWhite flex flex-col-reverse lg:flex-row items-center justify-between p-6  my-10  border border-myBlack rounded-2xl'>
             <div className=' lg:basis-[49%] mt-4 lg:mt-0 flex flex-col gap-5'>
                 <h2 className=' text-2xl sm:text-[30px] lg:text-[40px]   text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600 font-bold font-poppins'>Vue Dashboard</h2>
                 <p className='text-sm sm:text-base text-[#030712]'>
-                    This project aims to enhance my skills in <em>Vue.js</em> by building a <em>Dashboard</em> application. It utilizes modern technologies such as <em>Vite</em>, <em>Tailwind CSS</em>, and <em>PrimeVue</em>.
+                {t("vuedashp")}
                 </p>
                 <div className=' flex flex-wrap gap-2'>
                     <span className=' py-1.5 px-3  rounded-[20px] border  text-[#18181b]  flex items-center gap-1 text-sm '>

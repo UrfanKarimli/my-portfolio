@@ -3,8 +3,11 @@ import { FiExternalLink } from "react-icons/fi";
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react";
 import { FaAnglesDown } from "react-icons/fa6";
+import { useTranslations } from "next-intl";
 
 export default function Banner() {
+    const t = useTranslations("landing")
+
     const ref1 = useRef(null)
     const inView1 = useInView(ref1)
 
@@ -12,15 +15,22 @@ export default function Banner() {
     return (
         <section
             ref={ref1}
-            id='home'>
+        >
             <div
                 className='  lg:h-[90vh] w-full '>
                 <div className=" relative w-full h-full flex items-center justify-between">
-
-                    <span className="hidden lg:block absolute left-1/2 bottom-6 z-40 -translate-x-1/2">
-                        <FaAnglesDown className="animate-bounce  h-8 w-8 text-myWhite drop-shadow-[0_4px_10px_rgba(255,255,255,0.6)]" />
+                    <span className="hidden lg:flex flex-col items-center gap-3 absolute left-1/2 bottom-6 z-40 -translate-x-1/2 ">
+                        <h2 className=' text-center text-myWhite text-2xl  font-semibold light-shadow  animate-pulse'>{t("projects")}</h2>
+                        <motion.div
+                            initial={{ rotate: 2, }}
+                            animate={{ rotate: -90, }}
+                            transition={{ duration: 1.6, repeat: Infinity, repeatType: "reverse", }}
+                            viewport={{ once: true }}
+                            className=""
+                        >
+                            <FaAnglesDown className="  h-8 w-8 text-myWhite drop-shadow-[0_4px_10px_rgba(255,255,255,0.6)]" />
+                        </motion.div>
                     </span>
-
                     <div className=' flex flex-col gap-2 items-start'>
                         <motion.div
                             initial={{ scale: 0.4, opacity: 0 }}
@@ -28,7 +38,7 @@ export default function Banner() {
                             transition={{ duration: 0.3, bounce: 0.1, delay: 0 }}
                             viewport={{ once: false }}
                         >
-                            <h2 className='text-2xl ur:text-[35px] lg:text-[45px] font-light leading-none  text-myWhite font-roboto light-shadow'>Hello I`am</h2>
+                            <h2 className='text-2xl ur:text-[35px] lg:text-[45px] font-light leading-none  text-myWhite font-roboto light-shadow'> {t("title")}</h2>
                         </motion.div>
                         <motion.div
                             initial={{ x: -300, opacity: 0 }}
@@ -36,7 +46,7 @@ export default function Banner() {
                             transition={{ duration: 0.5, bounce: 0.1, delay: 0.2 }}
                             viewport={{ once: false }}
                         >
-                            <h1 className='text-4xl ur:text-[55px] lg:text-[80px] font-normal leading-none  text-myWhite font-roboto light-shadow'>Urfan Karimli</h1>
+                            <h1 className='text-4xl ur:text-[55px] lg:text-[80px] font-normal leading-none  text-myWhite font-roboto light-shadow'>{t("name")}</h1>
                         </motion.div>
                         <motion.div
                             initial={{ x: 500, opacity: 0 }}
@@ -54,7 +64,7 @@ export default function Banner() {
                             className=""
                         >
                             <a className='  mt-8  ur:text-[26px] border border-myBlack bg-myBlack hover:bg-white hover:text-myBlack py-1 px-3 text-white  flex items-center gap-2 rounded-lg '
-                                download={'Resume.pdf'} href="/Urfan-Karimli-eng.pdf">Download Resume <FiExternalLink /></a>
+                                download={'Resume.pdf'} href="/Urfan-Karimli-eng.pdf">{t("resume")} <FiExternalLink /></a>
                         </motion.div>
 
                     </div>

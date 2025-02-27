@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import React from 'react'
 import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri'
@@ -5,6 +6,8 @@ import { SiRedux, SiShadcnui, SiTypescript, SiZod } from 'react-icons/si'
 
 
 export default function BlankSpace() {
+                const t = useTranslations("landing")
+    
     return (
         <div className='relative w-full bg-myWhite flex flex-col lg:flex-row items-center justify-between p-6  my-10  border border-myBlack rounded-2xl'>
             <div className='w-full lg:basis-[49%] rounded-md overflow-hidden'>
@@ -14,10 +17,7 @@ export default function BlankSpace() {
             </div>
             <div className=' lg:basis-[49%] mt-4 lg:mt-0   flex flex-col gap-2'>
                 <div className='text-myBlack text-2xl sm:text-[30px] lg:text-[40px]  font-semibold'><span className=' underline'>Blank</span>space</div>
-                <p className='text-sm sm:text-base text-myBlack  font-normal'>
-                    The BlankSpace project is a platform designed for restaurants in Belgium. My main responsibilities in the development of
-                    the site include creating pages, implementing multilingual support, and integrating animations using Framer Motion.
-                </p>
+                <p className='text-sm sm:text-base text-myBlack  font-normal'> {t("blankspacep")}   </p>
                 <div className=' flex flex-wrap gap-2'>
                     <span className=' py-1.5 px-3  rounded-[20px] text-[#000] border  flex items-center gap-1 text-sm '>
                         <RiNextjsFill className=' text-[#000]' />

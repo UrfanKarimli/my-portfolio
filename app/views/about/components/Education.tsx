@@ -1,12 +1,15 @@
+import { useTranslations } from 'next-intl'
 import React from 'react'
 import { FaGraduationCap, FaUser } from 'react-icons/fa'
 import { FaAnglesDown } from 'react-icons/fa6'
 
 export default function Education() {
+    const t = useTranslations("about")
+
     return (
         <div >
-            <h1 className=' text-center text-myWhite text-2xl sm:text-[30px] lg:text-[40px]  font-semibold light-shadow  animate-pulse'>Education</h1>
-            <div className=' w-full flex items-center justify-center'>
+            <h1 className=' text-center text-myWhite text-2xl sm:text-[30px] lg:text-[40px]  font-semibold light-shadow  animate-pulse'>{t("education")}</h1>
+            <div className=' w-full flex items-center justify-center mt-2'>
                 <FaAnglesDown className='animate-bounce h-7 w-7 text-myWhite' />
             </div>
             <div className='relative w-full bg-myWhite  flex justify-center  p-6  py-16 my-10  border border-myBlack rounded-2xl'>
@@ -19,15 +22,17 @@ export default function Education() {
                     <div className=' w-full flex flex-col items-start '>
                         <h3 className='text-xl   sm:text-2xl font-bold text-myBlack'>Front-End Development </h3>
                         <h4 className=' text-lg sm:text-xl font-semibold text-myBlack'> Ingress Academy </h4>
-                        <span className=' text-xs sm:text-base text-[#1b1b1bbf]'>07/2023 - 12/2023 | Baku, Azerbaijan
+                        <span className=' text-xs sm:text-base text-[#1b1b1bbf]'>07/2023 - 12/2023 | {t("baku")},
+                            {t("azerbaijan")}
                         </span>
                     </div>
                     <div className=' w-full  flex flex-col items-start '>
-                        <h3 className='  text-xl   sm:text-2xl font-bold text-myBlack  '>Economy </h3>
-                        <h4 className=' text-lg sm:text-xl font-semibold text-myBlack'> Azerbaijan State University of Economics </h4>
-                        <span className='text-xs sm:text-base text-[#1b1b1bbf]'>09/2014 - 06/2018 | Baku, Azerbaijan
+                        <h3 className='  text-xl   sm:text-2xl font-bold text-myBlack  '>{t("economy")} </h3>
+                        <h4 className=' text-lg sm:text-xl font-semibold text-myBlack'>{t("unec")}</h4>
+                        <span className='text-xs sm:text-base text-[#1b1b1bbf]'>09/2014 - 06/2018 | {t("baku")},
+                            {t("azerbaijan")}
                         </span>
-                        <span className='text-myBlack'>Bachelor degree</span>
+                        <span className='text-myBlack'>{t("degre")}</span>
                     </div>
                 </div>
 

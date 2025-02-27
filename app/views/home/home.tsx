@@ -148,11 +148,11 @@ export default function HomePage() {
                 </div>
                 <motion.div
                     ref={ref7}
-                    initial={{ y: 250, opacity: 0 }}
-                    animate={inView7 ? { y: 0, opacity: 1 } : { y: 250, opacity: 0 }}
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    animate={inView7 ? { scale: 1, opacity: 1 } : { scale: 0.5, opacity: 0 }}
                     transition={{ duration: 0.8, delay: 0.5 }}
                     viewport={{ once: false }}
-                    className=""
+                    className="pr-5"
                 >
                     <DataPark />
                 </motion.div>
@@ -162,7 +162,7 @@ export default function HomePage() {
                     animate={inView8 ? { x: 0, opacity: 1 } : { x: 300, opacity: 0 }}
                     transition={{ duration: 0.8, delay: 0.5 }}
                     viewport={{ once: false }}
-                    className=""
+                    className="pr-5"
                 >
                     <TapAz />
                 </motion.div>
@@ -172,7 +172,7 @@ export default function HomePage() {
                     animate={inView9 ? { x: 0, opacity: 1 } : { x: -300, opacity: 0 }}
                     transition={{ duration: 0.8, delay: 0.5 }}
                     viewport={{ once: false }}
-                    className=""
+                    className="pr-5"
                 >
                     <BlankSpace />
                 </motion.div>
@@ -182,7 +182,7 @@ export default function HomePage() {
                     animate={inView10 ? { scaleX: 1, opacity: 1 } : { scaleX: 0.2, opacity: 0 }}
                     transition={{ duration: 1, bounce: 0.3, delay: 0.6 }}
                     viewport={{ once: false }}
-                    className=""
+                    className="pr-5"
                 >
                     <VueDashboard />
                 </motion.div>
@@ -190,9 +190,9 @@ export default function HomePage() {
                     ref={ref11}
                     initial={{ scaleY: 0.2, opacity: 0 }}
                     animate={inView11 ? { scaleY: 1, opacity: 1 } : { scaleY: 0.2, opacity: 0 }}
-                    transition={{ duration: 1 , bounce: 0.3,  delay: 0.6 }}
+                    transition={{ duration: 1 , bounce: 0.1,  delay: 0.4 }}
                     viewport={{ once: false }}
-                    className=""
+                    className="pr-5"
                 >
                     <VueCommerce />
                 </motion.div>

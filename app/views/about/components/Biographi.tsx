@@ -1,23 +1,15 @@
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import React from 'react'
 
 export default function Biographi() {
+    const t = useTranslations("about")
     return (
         <div className='relative w-full bg-myWhite flex flex-col-reverse items-center ur:flex-row ur:items-start justify-between p-6  my-10  border border-myBlack rounded-2xl'>
             <div className=' basis-[60%] flex flex-col  gap-5'>
-                <h2 className='text-myBlack text-2xl md:text-[40px]  font-semibold leading-none text-center'>About me</h2>
-                <p className=' text-myBlack hidden'>
-                    Salam, mən Ürfan Kərimli. Frontend Development sahəsində 1 ildən artıq iş təcrübəsinə sahibəm. Həm ofis
-                    şəraitində, həm də freelancer olaraq çalışmışam. İş təcrübəm əsasən React.js və Next.js üzərində olsa da,
-                    digər JavaScript kitabxanaları ilə də kod yaza bilirəm. Ehtiyac olduqda istənilən texnologiyanı qısa müddətdə
-                    öyrənmək qabiliyyətinə malikəm. İstənilən iş mühitinə tez uyğunlaşmaq, komandada effektiv işləmək və liderlik bacarıqlarına sahibəm.
-                </p>
+                <h2 className='text-myBlack text-2xl md:text-[40px]  font-semibold leading-none text-center'>{t("aboutme")}</h2>
                 <p className='text-sm sm:text-base text-myBlack '>
-                    Hello, I am Urfan Karimli. I have over a year of experience in Frontend Development. I have worked both in an
-                    office environment and as a freelancer. My expertise is primarily in React.js and Next.js, but I can also code
-                    using other JavaScript libraries. I have the ability to quickly learn any necessary technology when needed.
-                    I possess strong adaptability to different work environments, effective teamwork skills, and leadership abilities.
-                </p>
+                {t("description")}</p>
             </div>
             <div className=' md:basis-[30%] rounded-full ur:rounded-md overflow-hidden'>
                 <a href={`https://github.com/UrfanKarimli`} target='_blank' className=' ur:h-[300px] w-full  overflow-hidden'>

@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl'
 import React from 'react'
 import { AiOutlineAntDesign } from 'react-icons/ai'
 import { FaBootstrap, FaCss3, FaGithub, FaHtml5, FaReact, FaSass, FaVuejs } from 'react-icons/fa'
@@ -6,14 +7,16 @@ import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri'
 import { SiJavascript, SiPrimefaces, SiRedux, SiShadcnui, SiTypescript, SiZod } from 'react-icons/si'
 
 export default function Skills() {
+        const t = useTranslations("about")
+    
     return (
         <div >
-            <h1 className=' text-center text-myWhite text-2xl sm:text-[30px] lg:text-[40px] font-semibold light-shadow  animate-pulse'>Skills</h1>
-            <div className=' w-full flex items-center justify-center'>
+            <h1 className=' text-center text-myWhite text-2xl sm:text-[30px] lg:text-[40px] font-semibold light-shadow  animate-pulse'>{t("skills")}</h1>
+            <div className=' w-full flex items-center justify-center mt-2'>
                 <FaAnglesDown className='animate-bounce h-7 w-7 text-myWhite' />
             </div>
             <div className='relative w-full bg-myWhite flex flex-col  items-start justify-between p-6  my-10  border border-myBlack rounded-2xl'>
-                <h2 className='text-myBlack text-xl sm:text-2xl w-full   font-semibold leading-none text-center mb-5 '> Technical Skills</h2>
+                <h2 className='text-myBlack text-xl sm:text-2xl w-full   font-semibold leading-none text-center mb-5 '>  {t("tecskils")}</h2>
                 <div className=' flex flex-wrap gap-x-2 gap-y-3 my-1 border-b border-b-myYellow sm:border-none pb-3 sm:pb-0'>
                     <a href='https://www.w3schools.com/html/' target='_blank' className=' py-1.5 px-3  hover:border-myBlue   rounded-[20px] border border-[#e4e4e7] text-[#E34F26] bg-white flex items-center gap-1 text-sm'>
                         <FaHtml5 /> HTML
@@ -88,31 +91,31 @@ export default function Skills() {
                         #React Hook Form
                     </a>
                 </div>
-                <h2 className='text-myBlack text-xl sm:text-2xl w-full   font-semibold leading-none text-center mt-10 mb-5 sm:my-5 '> Soft Skills</h2>
+                <h2 className='text-myBlack text-xl sm:text-2xl w-full   font-semibold leading-none text-center mt-10 mb-5 sm:my-5 '>  {t("softskills")}</h2>
                 <div className=' flex flex-wrap gap-x-2 gap-y-3 my-1'>
                     <a className=' py-1.5 px-3  hover:border-myBlue  rounded-[20px] border text-myBlue bg-[#f4f4f5] flex items-center gap-1 text-sm'>
-                        #Adaptability
+                        #{t("adaptability")}
                     </a>
                     <a className=' py-1.5 px-3  hover:border-myBlue  rounded-[20px] border text-myBlue bg-[#f4f4f5] flex items-center gap-1 text-sm'>
-                        #Attention to Detail
+                        #{t("attention")}
                     </a>
                     <a className=' py-1.5 px-3  hover:border-myBlue  rounded-[20px] border text-myBlue bg-[#f4f4f5] flex items-center gap-1 text-sm'>
-                        #Creativity
+                        #{t("creativity")}
                     </a>
                     <a className=' py-1.5 px-3  hover:border-myBlue  rounded-[20px] border text-myBlue bg-[#f4f4f5] flex items-center gap-1 text-sm'>
-                        #Teamwork
+                        #{t("teamwork")}
                     </a>
                     <a className=' py-1.5 px-3  hover:border-myBlue  rounded-[20px] border text-myBlue bg-[#f4f4f5] flex items-center gap-1 text-sm'>
-                        #Problem Solving
+                        #{t("problemSolving")}
                     </a>
                     <a className=' py-1.5 px-3  hover:border-myBlue  rounded-[20px] border  text-myBlue bg-[#f4f4f5] flex items-center gap-1 text-sm'>
-                        #Communication
+                        #{t("communication")}
                     </a>
                     <a className=' py-1.5 px-3  hover:border-myBlue  rounded-[20px] border  text-myBlue bg-[#f4f4f5] flex items-center gap-1 text-sm'>
-                        #Continuous Learning
+                        #{t("continuousLearning")}
                     </a>
                     <a className=' py-1.5 px-3  hover:border-myBlue  rounded-[20px] border  text-myBlue bg-[#f4f4f5] flex items-center gap-1 text-sm'>
-                        #Lidership
+                        #{t("lidership")}
                     </a>
 
                 </div>

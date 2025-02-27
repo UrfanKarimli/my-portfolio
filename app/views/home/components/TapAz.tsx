@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import React from 'react'
 import { FaReact } from 'react-icons/fa'
@@ -5,13 +6,13 @@ import { RiTailwindCssFill } from 'react-icons/ri'
 import { SiJavascript, SiShadcnui } from 'react-icons/si'
 
 export default function TapAz() {
+        const t = useTranslations("landing")
+    
     return (
         <div className='relative w-full bg-myWhite flex flex-col-reverse lg:flex-row items-center justify-between p-6  my-10  border border-myBlack rounded-2xl'>
             <div className=' lg:basis-[49%] mt-4 lg:mt-0  flex flex-col gap-5'>
                 <h2 className='text-[#ff4f08] text-2xl sm:text-[30px] lg:text-[40px]  font-semibold leading-none'>Tap.az <sub>(copy)</sub></h2>
-                <p className='text-sm sm:text-base text-myBlack '>The main objective of this project is to gain practical experience with React.js technologies and become familiar with modern frontend tools.
-                    Since no backend is used in this project, static data is stored in JavaScript files to ensure proper functionality in the Vercel environment.
-                </p>
+                <p className='text-sm sm:text-base text-myBlack '>{t("tapazp")}</p>
                 <div className=' flex flex-wrap gap-2 my-1'>
                     <span className=' py-1.5 px-3  rounded-[20px] text-[#087ea4] bg-[#e6f7ff] flex items-center gap-1 text-sm '>
                         <FaReact />

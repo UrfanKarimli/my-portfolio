@@ -6,10 +6,14 @@ import { FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { GoMail } from "react-icons/go";
 import { Drawer } from 'antd';
 import { IoMenu } from 'react-icons/io5';
+import LocaleSwitcher from '../local-switcher/LocaleSwitcher';
+import { useTranslations } from 'next-intl';
 
 export default function Header() {
+  const t = useTranslations("header")
   const [isScrolled, setIsScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 80) {
@@ -40,10 +44,13 @@ export default function Header() {
           <Drawer  width={150}  onClose={onClose} open={open} className=' ant-drawer-content'>
             <ul onClick={()=>{setOpen(false)}} className=' flex flex-col items-center space-y-4'>
               <li>
-                <Link href='/' className='font-semibold text-myWhite '>Home</Link>
+                <Link href='/' className='font-semibold text-myWhite '>{t("home")}</Link>
               </li>
               <li>
-                <Link href='/about' className='font-semibold text-myWhite '>About</Link>
+                <Link href='/about' className='font-semibold text-myWhite '>{t("about")}</Link>
+              </li>
+              <li>
+            <LocaleSwitcher/>
               </li>
               <li>
                 <Link target='_blank' href='https://www.linkedin.com/in/%C3%BCrfan-k%C9%99rimli/' className='text-xl text-myWhite light-shadow hover:scale-110 '>
@@ -70,10 +77,11 @@ export default function Header() {
         </div>
         <ul className='hidden ur:flex justify-between items-center'>
           <li className='flex space-x-4  font-roboto'>
-            <Link href='/' className='text-lg text-myWhite light-shadow hover:scale-110 '>Home</Link>
-            <Link href='/about' className='text-lg text-myWhite light-shadow hover:scale-110'>About</Link>
+            <Link href='/' className='text-lg text-myWhite light-shadow hover:scale-110 '>{t("home")}</Link>
+            <Link href='/about' className='text-lg text-myWhite light-shadow hover:scale-110'>{t("about")}</Link>
           </li>
           <li className='flex space-x-4'>
+            <LocaleSwitcher/>
             <Link target='_blank' href='https://www.linkedin.com/in/%C3%BCrfan-k%C9%99rimli/' className='text-xl text-myWhite light-shadow hover:scale-110 '>
               <FaLinkedin />
             </Link>

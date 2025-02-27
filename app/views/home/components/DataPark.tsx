@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import React from 'react'
 import { FaReact } from 'react-icons/fa'
@@ -5,6 +6,8 @@ import { RiTailwindCssFill } from 'react-icons/ri'
 import { SiShadcnui, SiTypescript } from 'react-icons/si'
 
 export default function DataPark() {
+            const t = useTranslations("landing")
+    
     return (
         <div className='relative w-full bg-myWhite flex flex-col lg:flex-row items-center justify-between p-6  my-10  border border-myBlack rounded-2xl'>
             <div className='w-full lg:basis-[49%] rounded-md overflow-hidden'>
@@ -15,11 +18,7 @@ export default function DataPark() {
             <div className=' lg:basis-[49%] mt-4 lg:mt-0  flex flex-col gap-2'>
                 <h2 className='text-[#f7941d] text-2xl sm:text-[30px] lg:text-[40px]  font-semibold'>Data park</h2>
                 <p className='text-sm sm:text-base text-[#355474]'>
-                    I developed the entire front-end of The <em>Data Park </em>
-                    platform, which was designed as a hub for data academies,
-                    consulting firms, startups, the CDO club, job vacancies,
-                    talent pools, data science events and meetups, research,
-                    and the latest industry news.
+                    {t("dataparkp")}
                 </p>
                 <div className='text-sm sm:text-base flex flex-wrap gap-2'>
                     <span className=' py-1.5 px-3  rounded-[20px] text-[#087ea4] bg-[#e6f7ff] flex items-center gap-1 text-sm '>
