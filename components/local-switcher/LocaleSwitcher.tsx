@@ -10,7 +10,7 @@ export default function LocaleSwitcher() {
     const [isPending, startTransition] = useTransition();
     const router = useRouter();
 
-    const [localeActive, setLocaleActive] = useState('');
+    const [localeActive, setLocaleActive] = useState('az');
 
     useEffect(() => {
         const storedLocale = Cookies.get('uk-locale');
@@ -38,20 +38,18 @@ export default function LocaleSwitcher() {
     return (
             <div className=' relative w-5 h-5'>
                 {
-                    localeActive === 'az' &&
+                    localeActive === 'az' ?
                         (
                             <button onClick={() => onSelectChange('en')} className=' absolute' >
                                 <Image src={`/united-kingdom.png`} alt={`flag`} height={20} width={20} />
                             </button>
-                        ) 
+                        ) : (
+                            <button onClick={() => onSelectChange('az')} className=' absolute'>
+                                <Image src={`/azerbaijan.png`} alt={`flagg`} height={25} width={25} />
+                            </button>
+                        )
                 }
-                {
-                    localeActive === 'en' && (
-                        <button onClick={() => onSelectChange('az')} className=' absolute'>
-                            <Image src={`/azerbaijan.png`} alt={`flagg`} height={25} width={25} />
-                        </button>
-                    )
-                }
+               
             </div>
 
     );
