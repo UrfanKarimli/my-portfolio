@@ -1,7 +1,7 @@
 {
     "title": "Hello I`am",
     "name": "Urfan Karimli",
-    "resume" : "Download CV",
+    "resume" : "My CV",
     "projects": "Projects",
     "dataparkp" : "I developed the entire front-end of The Data Park platform, which was designed as a hub for data academies, consulting firms, startups, the CDO club, job vacancies, talent pools, data science events and meetups, research, and the latest industry news.",
     "tapazp": "The main objective of this project is to gain practical experience with React.js technologies and become familiar with modern frontend tools. Since no backend is used in this project, static data is stored in JavaScript files to ensure proper functionality in the Vercel environment.",

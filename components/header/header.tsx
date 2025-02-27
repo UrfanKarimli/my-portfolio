@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useEffect, useState } from 'react';
-import { FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaWhatsapp, FaGithub } from "react-icons/fa";
 import { GoMail } from "react-icons/go";
 import { Drawer } from 'antd';
 import { IoMenu } from 'react-icons/io5';
@@ -39,10 +39,10 @@ export default function Header() {
       <nav className=' '>
         <div className='flex justify-between items-center ur:hidden'>
           <button onClick={showDrawer}>
-          <IoMenu  className='text-2xl text-myWhite '/>
+            <IoMenu className='text-2xl text-myWhite ' />
           </button>
-          <Drawer  width={150}  onClose={onClose} open={open} className=' ant-drawer-content'>
-            <ul onClick={()=>{setOpen(false)}} className=' flex flex-col items-center space-y-4'>
+          <Drawer width={150} onClose={onClose} open={open} className=' ant-drawer-content'>
+            <ul onClick={() => { setOpen(false) }} className=' flex flex-col items-center space-y-4'>
               <li>
                 <Link href='/' className='font-semibold text-myWhite '>{t("home")}</Link>
               </li>
@@ -50,7 +50,12 @@ export default function Header() {
                 <Link href='/about' className='font-semibold text-myWhite '>{t("about")}</Link>
               </li>
               <li>
-            <LocaleSwitcher/>
+                <LocaleSwitcher />
+              </li>
+              <li>
+                <Link target='_blank' href='https://github.com/UrfanKarimli' className='text-xl text-myWhite light-shadow hover:scale-110 '>
+                  <FaGithub />
+                </Link>
               </li>
               <li>
                 <Link target='_blank' href='https://www.linkedin.com/in/%C3%BCrfan-k%C9%99rimli/' className='text-xl text-myWhite light-shadow hover:scale-110 '>
@@ -80,8 +85,11 @@ export default function Header() {
             <Link href='/' className='text-lg text-myWhite light-shadow hover:scale-110 '>{t("home")}</Link>
             <Link href='/about' className='text-lg text-myWhite light-shadow hover:scale-110'>{t("about")}</Link>
           </li>
-          <li className='flex space-x-4'>
-            <LocaleSwitcher/>
+          <li className='flex items-center space-x-4'>
+            <LocaleSwitcher />
+            <Link target='_blank' href='https://github.com/UrfanKarimli' className='text-xl text-myWhite light-shadow hover:scale-110 '>
+              <FaGithub />
+            </Link>
             <Link target='_blank' href='https://www.linkedin.com/in/%C3%BCrfan-k%C9%99rimli/' className='text-xl text-myWhite light-shadow hover:scale-110 '>
               <FaLinkedin />
             </Link>

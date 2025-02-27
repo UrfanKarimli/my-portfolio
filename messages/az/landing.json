@@ -1,7 +1,7 @@
 {
     "title": "Salam, mən",
     "name": "Ürfan Kərimli",
-    "resume" : "CV yüklə",
+    "resume" : "CV-im",
     "projects": "Layihələr",
     "dataparkp" : "Front-end hissəsinin tamamını təcrübə müddətim ərzində tək özüm yazmışam, bu platforma Data sahəsində yeni olanlar və mütəxəssislər üçün innovativ bir mərkəz olması məqsədiilə yaradılıb. Burada siz Data elmi sahəsində iş vakansiyaları, IT xəbərləri, sənaye yenilikləri və bloq yazıları kimi geniş resurslara çata bilərsiniz. Həmçinin, yaxınlaşan tədbirlər və konfranslar haqqındaməlumatları da əldə edə bilərsiniz.",
     "tapazp": "Bu layihənin əsas məqsədi React.js texnologiyaları ilə praktiki təcrübə qazanmaq və müasir frontend alətləri ilə tanış olmaqdır. Backend istifadə olunmadığı üçün, məlumatların Vercel mühitində düzgün işləməsini təmin etmək məqsədilə statik məlumatlar JavaScript fayllarında saxlanılır.",

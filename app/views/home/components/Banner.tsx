@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FiExternalLink } from "react-icons/fi";
+// import { FiExternalLink } from "react-icons/fi";
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react";
 import { FaAnglesDown } from "react-icons/fa6";
@@ -56,7 +56,7 @@ export default function Banner() {
                         >
                             <h2 className='text-2xl ur:text-[35px] lg:text-[45px] font-light leading-none  text-myWhite font-roboto light-shadow'>Front-end Developer</h2>
                         </motion.div>
-                        <motion.div
+                        {/* <motion.div
                             initial={{ scale: 0.9, }}
                             animate={{ scale: 1, }}
                             transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
@@ -65,7 +65,7 @@ export default function Banner() {
                         >
                             <a className='  mt-8  ur:text-[26px] border border-myBlack bg-myBlack hover:bg-white hover:text-myBlack py-1 px-3 text-white  flex items-center gap-2 rounded-lg '
                                 download={'Resume.pdf'} href="/Urfan-Karimli-eng.pdf">{t("resume")} <FiExternalLink /></a>
-                        </motion.div>
+                        </motion.div> */}
 
                     </div>
 

@@ -1,12 +1,15 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import {  useTransition, useEffect, useState } from 'react';
+import { useTransition, useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import Spinner from '../spinner/Spinner';
 import Image from 'next/image';
+import { FiExternalLink } from 'react-icons/fi';
+import { useTranslations } from 'next-intl';
 
 export default function LocaleSwitcher() {
+    const t = useTranslations("landing")
     const [isPending, startTransition] = useTransition();
     const router = useRouter();
 
@@ -28,7 +31,7 @@ export default function LocaleSwitcher() {
 
 
 
-    if(isPending){
+    if (isPending) {
         return <Spinner />
     }
 
@@ -36,6 +39,24 @@ export default function LocaleSwitcher() {
 
 
     return (
+
+        <div className=' flex flex-col ur:flex-row  items-center gap-4'>
+            <div>
+                {
+                    localeActive === 'az' ? (
+                        <a className=' ur:animate-pulse ur:text-sm  ur:border border-myBlack ur:bg-myBlack ur:hover:bg-white ur:hover:text-myBlack ur:py-[2px] ur:px-2 text-white font-medium  flex items-center gap-2 rounded-lg '
+                            download={'Urfan-Karimli-az.pdf'} href="/Urfan-Karimli-az.pdf">
+                            {t("resume")}
+                            <FiExternalLink />
+                        </a>)
+                        : (
+                            <a className=' ur:animate-pulse ur:text-sm  ur:border border-myBlack ur:bg-myBlack ur:hover:bg-white ur:hover:text-myBlack ur:py-[2px] ur:px-2 text-white font-medium  flex items-center gap-2 rounded-lg  '
+                                download={'Urfan-Karimli-eng.pdf'} href="/Urfan-Karimli-eng.pdf">
+                                {t("resume")}
+                                <FiExternalLink />
+                            </a>)
+                }
+            </div>
             <div className=' relative w-5 h-5'>
                 {
                     localeActive === 'az' ?
@@ -49,8 +70,8 @@ export default function LocaleSwitcher() {
                             </button>
                         )
                 }
-               
-            </div>
 
+            </div>
+        </div>
     );
 }
