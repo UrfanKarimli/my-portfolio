@@ -45,7 +45,7 @@ export default function LocaleSwitcher() {
                 {
                     localeActive === 'az' ? (
                         <a className=' ur:animate-pulse ur:text-sm  ur:border border-myBlack ur:bg-myBlack ur:hover:bg-white ur:hover:text-myBlack ur:py-[2px] ur:px-2 text-white font-medium  flex items-center gap-2 rounded-lg '
-                            download={'Urfan-Karimli-az.pdf'} href="/Urfan-Karimli-az.pdf">
+                            download={'Urfan-Kerimli-az.pdf'} href="/Urfan-Kerimli-az.pdf">
                             {t("resume")}
                             <FiExternalLink />
                         </a>)
