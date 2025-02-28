@@ -5,7 +5,7 @@
     "projects": "Projects",
     "dataparkp" : "I developed the entire front-end of The Data Park platform, which was designed as a hub for data academies, consulting firms, startups, the CDO club, job vacancies, talent pools, data science events and meetups, research, and the latest industry news.",
     "tapazp": "The main objective of this project is to gain practical experience with React.js technologies and become familiar with modern frontend tools. Since no backend is used in this project, static data is stored in JavaScript files to ensure proper functionality in the Vercel environment.",
-    "blankspacep": "The BlankSpace project is a platform designed for hosting events in Belgium. My main responsibilities in the development of the site include creating pages, implementing multilingual support, and integrating animations using Framer Motion.",
+    "blankspacep": "Blankspace Brussels is a minimalist, multifunctional event space in central Brussels. With white walls, sliding partitions, and outdoor terraces, it suits various events. It partners with caterers and offers interactive experiences. My main responsibilities in the development of the site include creating pages, implementing multilingual support, and integrating animations using Framer Motion.",
     "vuekomp":"Created for the purpose of learning Vue.js",
     "vuedashp": "This project aims to enhance my skills in Vue.js by building a Dashboard application. It utilizes modern technologies such as Vite, Tailwind CSS, and PrimeVue."
 

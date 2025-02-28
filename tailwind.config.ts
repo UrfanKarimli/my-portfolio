@@ -36,6 +36,7 @@ export default {
         myBlack: "#1b1b1b",
         myYellow: "#ff4f08",
         myBlue: "#1E2F97",
+        myGray: "#11201EA3",
       },
     },
   },

@@ -7,7 +7,7 @@ import Spinner from '../spinner/Spinner';
 import Image from 'next/image';
 import { FiExternalLink } from 'react-icons/fi';
 import { useTranslations } from 'next-intl';
-
+import { Tooltip } from 'antd';
 export default function LocaleSwitcher() {
     const t = useTranslations("landing")
     const [isPending, startTransition] = useTransition();
@@ -61,13 +61,19 @@ export default function LocaleSwitcher() {
                 {
                     localeActive === 'az' ?
                         (
-                            <button onClick={() => onSelectChange('en')} className=' absolute' >
-                                <Image src={`/united-kingdom.png`} alt={`flag`} height={20} width={20} />
-                            </button>
+                            <Tooltip title={`Azərbaycan dilinə keç`}>
+                                <button onClick={() => onSelectChange('en')} className=' absolute' >
+                                    <Image src={`/united-kingdom.png`} alt={`flag`} height={20} width={20} />
+                                </button>
+                            </Tooltip>
+
                         ) : (
+                            <Tooltip title={`Switch to English`}>
                             <button onClick={() => onSelectChange('az')} className=' absolute'>
                                 <Image src={`/azerbaijan.png`} alt={`flagg`} height={25} width={25} />
                             </button>
+                            </Tooltip>
+
                         )
                 }
 

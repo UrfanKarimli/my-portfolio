@@ -15,7 +15,7 @@ export default function BlankSpace() {
                     <Image src={'/BlankSpace.png'} alt="" width={750} height={535} className='  w-full h-full  object-cover object-center transition transform duration-300 ease-in-out hover:scale-105' />
                 </a>
             </div>
-            <div className=' lg:basis-[49%] mt-4 lg:mt-0   flex flex-col gap-2'>
+            <div className=' lg:basis-[49%] mt-4 lg:mt-0   flex flex-col gap-3'>
                 <div className='text-myBlack text-2xl sm:text-[30px] lg:text-[40px]  font-semibold'><span className=' underline'>Blank</span>space</div>
                 <p className='text-sm sm:text-base text-myBlack  font-normal'> {t("blankspacep")}   </p>
                 <div className=' flex flex-wrap gap-2'>
@@ -44,7 +44,6 @@ export default function BlankSpace() {
                 </div>
             </div>
             <div className='absolute  top-0 -right-3 -z-10 h-[103%] w-[100.9%] rounded-3xl pt-[2px] pl-[2px] rounded-br-3xl bg-black   xs:-right-2 xs:h-[102%] xs:w-[100%] xs:rounded-[1.5rem] '>
-
             </div>
         </div>
     )

@@ -5,7 +5,7 @@
     "projects": "Layihələr",
     "dataparkp" : "Front-end hissəsinin tamamını təcrübə müddətim ərzində tək özüm yazmışam, bu platforma Data sahəsində yeni olanlar və mütəxəssislər üçün innovativ bir mərkəz olması məqsədiilə yaradılıb. Burada siz Data elmi sahəsində iş vakansiyaları, IT xəbərləri, sənaye yenilikləri və bloq yazıları kimi geniş resurslara çata bilərsiniz. Həmçinin, yaxınlaşan tədbirlər və konfranslar haqqındaməlumatları da əldə edə bilərsiniz.",
     "tapazp": "Bu layihənin əsas məqsədi React.js texnologiyaları ilə praktiki təcrübə qazanmaq və müasir frontend alətləri ilə tanış olmaqdır. Backend istifadə olunmadığı üçün, məlumatların Vercel mühitində düzgün işləməsini təmin etmək məqsədilə statik məlumatlar JavaScript fayllarında saxlanılır.",
-    "blankspacep": "BlankSpace layihəsi Belçikada istənilən növ tədbirlərə ev sahibliyi etmək üçün nəzərdə tutulmuş bir platformadır. Saytın hazırlanması prosesində mənim əsas vəzifələrim səhifələrin yaradılması, çoxdilli dəstəyin tətbiqi və Framer Motion vasitəsilə animasiyaların inteqrasiyası olub.",
+    "blankspacep": "Blankspace Brussels, Brüsselin mərkəzində yerləşən minimalist və çoxfunksiyalı tədbir məkanıdır. Ağ divarlar, sürüşən arakəsmələr və açıq terrasları ilə müxtəlif tədbirlər üçün uyğundur. Katering partnyorları və interaktiv təcrübələr təklif edir. Saytın hazırlanması prosesində mənim əsas vəzifələrim səhifələrin yaradılması, çoxdilli dəstəyin tətbiqi və Framer Motion vasitəsilə animasiyaların inteqrasiyası olub.",
     "vuekomp":"Vue.js öyrənmək məqsədi ilə yaradılıb.",
     "vuedashp": "Bu layihə Vue.js üzrə bacarıqlarımı inkişaf etdirmək məqsədi ilə Dashboard tətbiqi qurmağa yönəlib. Layihədə Vite, Tailwind CSS və PrimeVue kimi müasir texnologiyalardan istifadə olunur."
 }

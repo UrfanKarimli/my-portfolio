@@ -84,6 +84,7 @@ export default function Header() {
           <li className='flex space-x-4  font-roboto'>
             <Link href='/' className='text-lg text-myWhite light-shadow hover:scale-110 '>{t("home")}</Link>
             <Link href='/about' className='text-lg text-myWhite light-shadow hover:scale-110'>{t("about")}</Link>
+            <Link href='/interview/html' className='text-lg text-myWhite light-shadow hover:scale-110'>{t("questions")}</Link>
           </li>
           <li className='flex items-center space-x-4'>
             <LocaleSwitcher />
