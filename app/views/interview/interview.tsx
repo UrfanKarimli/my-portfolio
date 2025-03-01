@@ -62,7 +62,7 @@ export default function Interview() {
         <div className='z-20 sticky mx-5 lg:mx-9 flex items-start gap-4  h-full min-h-screen'>
             <aside className=' sticky top-20  left-0  '>
                 <nav  >
-                    <ul className="bg-myWhite flex flex-col w-44 rounded-lg py-3">
+                    <ul className="bg-myWhite flex flex-col ur:w-44 rounded-lg py-3">
                         {interviewTopics.map((topic) => (
                             <li key={topic.url}>
                                 <Link className={`block font-semibold text-sm ${url === topic.url ? 'text-myBlue hover:text-[#2e3d9b] hover:bg-[#e3f7f4]' : 'text-myGray hover:text-myBlack hover:bg-[#eff3f3]'} rounded-md py-1 px-2`}

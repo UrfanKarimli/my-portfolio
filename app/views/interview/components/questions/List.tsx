@@ -1,4 +1,4 @@
-import React, {  useState } from 'react'
+import React, { useState } from 'react'
 import { motion } from "framer-motion"
 
 import { FaPlus } from 'react-icons/fa6';
@@ -22,7 +22,7 @@ export default function List(item: TQuestion) {
             key={item.id}
             onClick={() => handleLinkClick(item.id)}
             className=' first:border-t  first:border-t-myBlue py-1 border-b border-b-myBlue relative cursor-pointer pr-8 overflow-hidden'>
-            <div style={{ textShadow: 'none' }} className=' w-full text-myBlack overflow-x-hidden line-clamp-1 '>
+            <div style={{ textShadow: 'none' }} className=' font-medium w-full text-myBlack overflow-x-hidden line-clamp-1 '>
                 {item.id}. {item.question}
                 <FaPlus
                     className={`text-2xl text-myBlue absolute right-1 top-4 transform -translate-y-1/2 transition-transform duration-300 ${expanded[item.id] ? 'rotate-[-45deg]' : ''}`}
@@ -36,11 +36,14 @@ export default function List(item: TQuestion) {
                         : { height: "0px", opacity: 1 }
                 }
                 exit={{ height: "0px", opacity: 0 }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
-                className="overflow-hidden text-sm  text-justify px-2  will-change-[transform,opacity]"
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="overflow-hidden   will-change-[transform,opacity]"
             >
-                {item.answer}
+                <div style={{ textShadow: 'none' }} className='text-sm text-[#000] border bg-[#EEE8AA] py-2  text-justify px-2'>
+                    {item.answer}
+                </div>
             </motion.div>
         </li>
     )
 }
+
