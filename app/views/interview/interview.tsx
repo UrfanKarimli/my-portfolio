@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
-import React, { useEffect, useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import List from './components/questions/List'
 import { interviewTopics } from './components/questions/links'
 import { formatUrl } from '@/utils/formatUrl'
@@ -12,13 +12,17 @@ import { JSQuestions } from './components/questions/js-questions'
 import { NextQuestions } from './components/questions/next-questions'
 import { ReactQuestions } from './components/questions/react-questions'
 import { TSQuestions } from './components/questions/ts-questions'
+import { GeneralQuestions } from './components/questions/general-questions'
 
-
-
+type TAnswer = {
+    type: string,
+    content: string,
+    language?: string
+}
 type TQuestion = {
     id: number
     question: string
-    answer: string
+    answer: TAnswer[]
 }
 
 export default function Interview() {
@@ -47,6 +51,9 @@ export default function Interview() {
                     break;
                 case "type-script":
                     data = await TSQuestions.getData();
+                    break;
+                    case "general":
+                    data = await GeneralQuestions.getData();
                     break;
                 default:
                     data = [];

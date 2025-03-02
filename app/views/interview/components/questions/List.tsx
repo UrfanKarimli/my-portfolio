@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 import { motion } from "framer-motion"
+import CodeBlock from "@/components/code-block/code-block";
 
 import { FaPlus } from 'react-icons/fa6';
 
@@ -7,10 +8,15 @@ interface ExpandedState {
     [key: number]: boolean
 }
 
+type TAnswer = {
+    type: string,
+    content: string,
+    language?: string
+}
 type TQuestion = {
     id: number
     question: string
-    answer: string
+    answer: TAnswer[]
 }
 export default function List(item: TQuestion) {
     const [expanded, setExpanded] = useState<ExpandedState>({})
@@ -20,9 +26,8 @@ export default function List(item: TQuestion) {
     return (
         <li
             key={item.id}
-            onClick={() => handleLinkClick(item.id)}
-            className=' first:border-t  first:border-t-myBlue py-1 border-b border-b-myBlue relative cursor-pointer pr-8 overflow-hidden'>
-            <div style={{ textShadow: 'none' }} className=' font-medium w-full text-myBlack overflow-x-hidden line-clamp-1 '>
+            className=' first:border-t  first:border-t-myBlue py-1 border-b border-b-myBlue relative '>
+            <div onClick={() => handleLinkClick(item.id)} style={{ textShadow: 'none' }} className='cursor-pointer font-medium w-full text-myBlack overflow-x-hidden line-clamp-1 pr-8  overflow-hidden'>
                 {item.id}. {item.question}
                 <FaPlus
                     className={`text-2xl text-myBlue absolute right-1 top-4 transform -translate-y-1/2 transition-transform duration-300 ${expanded[item.id] ? 'rotate-[-45deg]' : ''}`}
@@ -40,7 +45,13 @@ export default function List(item: TQuestion) {
                 className="overflow-hidden   will-change-[transform,opacity]"
             >
                 <div style={{ textShadow: 'none' }} className='text-sm text-[#000] border bg-[#EEE8AA] py-2  text-justify px-2'>
-                    {item.answer}
+                    {item?.answer?.map((item, index)=>
+                    item.type === "text" ? (
+                        <p key={index}>{item.content}</p>
+                    ) : (
+                        <CodeBlock key={index}  language={item.language || "plaintext"} code={ item.content}/>
+                    )
+                    )}
                 </div>
             </motion.div>
         </li>

@@ -4,5 +4,6 @@ export const interviewTopics = [
     { name: 'JavaScript', url: 'java-script', href: '/interview/java-script' },
     { name: 'TypeScript', url: 'type-script', href: '/interview/type-script' },
     { name: 'React.js', url: 'react_js', href: '/interview/react_js' },
-    { name: 'Next.js', url: 'next_js', href: '/interview/next_js' }
+    { name: 'Next.js', url: 'next_js', href: '/interview/next_js' },
+    // { name: 'General', url: 'general', href: '/interview/general' }
 ];
