@@ -7,9 +7,42 @@ export function useHeaderData() {
   const t = useTranslations("header");
 
   const menuItems = [
-    { name: t("home"), href: '/' },
-    { name: t("about"), href: '/about' },
-    { name: t("questions"), href: '/interview/html' },
+    {
+      id: 1,
+      name: t("home"),
+      href: '/'
+    },
+    {
+      id: 2,
+      name: t("about"),
+      href: '/about'
+    },
+    {
+      id: 3,
+      name: <div style={{ textShadow: 'none' }} className="text-base font-bold ur:font-normal ur:bg-myBlack p-[2px] pl-1 rounded-md text-myWhite cursor-pointer">
+        {t("knowledge")}
+        <span
+          style={{ textShadow: 'none' }}
+          className="ml-px font-bold bg-[#ffa31a] text-myBlack px-[2px] py-px rounded-sm leading-normal">
+          {t("hub")}
+        </span>
+      </div>,
+      submenu: [
+        {
+          id: 1,
+          name: "Suallar",
+          items: [
+            { name: 'HTML', url: 'html', href: '/knowledge-hub/html', },
+            { name: 'CSS', url: 'css', href: '/knowledge-hub/css', },
+            { name: 'JavaScript',url: 'java-script', href: '/knowledge-hub/java-script', },
+            { name: 'TypeScript',url: 'type-script', href: '/knowledge-hub/type-script', },
+            { name: 'React.js',url: 'react_js', href: '/knowledge-hub/react_js', },
+            { name: 'Next.js',url: 'next_js', href: '/knowledge-hub/next_js', },
+            // { name: 'General',url: 'general', href: '/knowledge-hub/general', }
+          ]
+        }
+      ]
+    },
   ];
 
   const socialLinks = [

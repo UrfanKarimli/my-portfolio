@@ -34,13 +34,13 @@ export default function List(item: TQuestion) {
                 />
             </div>
             <motion.div
-                initial={{ height: "0px", opacity: 1 }}
+                initial={{ height: "0px",  }}
                 animate={
                     expanded[item.id]
-                        ? { height: "auto", opacity: 1 }
-                        : { height: "0px", opacity: 1 }
+                        ? { height: "auto", }
+                        : { height: "0px", }
                 }
-                exit={{ height: "0px", opacity: 0 }}
+                exit={{ height: "0px",}}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 className="overflow-hidden   will-change-[transform,opacity]"
             >

@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 .ant-drawer-content {
-  background-color: #1E2F97 !important; 
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left: #ff4f08 ;
+  background-color: #3b54f3 !important; 
 }
 *{
   text-shadow: 5px 5px 10px #2b2a2a;
