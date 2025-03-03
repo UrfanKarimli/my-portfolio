@@ -2,10 +2,10 @@
 
 
 import React from 'react'
-import Biographi from './components/biography';
-import Skills from './components/skills';
-import Experience from './components/experience';
-import Education from './components/education';
+import Biographi from './components/Biography';
+import Skills from './components/Skills';
+import Experience from './components/Experience';
+import Education from './components/Education';
 
 export default function AboutPage() {
   return (
