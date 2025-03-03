@@ -25,14 +25,14 @@ export default function CodeBlock({ language, code }: CodeBlockProps) {
     };
 
     return (
-        <div className="relative group  overflow-hidden">
+        <div style={{ textShadow: 'none' }}  className="relative group  overflow-hidden">
             <button
                 onClick={handleCopy}
                 className="absolute top-3 right-2 bg-gray-800 text-white p-1 rounded hover:bg-gray-700 transition"
             >
                 {copied ? <FaCheck className="text-green-400" /> : <FaRegCopy />}
             </button>
-            <SyntaxHighlighter language={language} style={oneDark}>
+            <SyntaxHighlighter  language={language} style={oneDark}>
                 {code}
             </SyntaxHighlighter>
         </div>
