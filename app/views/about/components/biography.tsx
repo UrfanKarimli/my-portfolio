@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 
 
-export default function Biographi() {
+export default function Biography() {
     const t = useTranslations("about")
     return (
         <div className='relative w-full bg-myWhite flex flex-col-reverse items-center ur:flex-row ur:items-start justify-between p-6  my-10  border border-myBlack rounded-2xl'>
