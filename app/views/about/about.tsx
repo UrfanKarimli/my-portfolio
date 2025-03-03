@@ -1,11 +1,10 @@
 "use client";
 
 
-import React from 'react'
-import Skills from './components/Skills';
-import Experience from './components/Experience';
-import Education from './components/Education';
 import Biography from './components/biography';
+import Education from './components/education';
+import Experience from './components/experience';
+import Skills from './components/skills';
 
 export default function AboutPage() {
   return (
