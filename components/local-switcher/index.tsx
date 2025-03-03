@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { useTransition, useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
-import Spinner from '../spinner/Spinner';
+import Spinner from '../spinner';
 import Image from 'next/image';
 import { FiExternalLink } from 'react-icons/fi';
 import { useTranslations } from 'next-intl';

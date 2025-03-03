@@ -4,12 +4,12 @@ import { useRef, useState } from "react";
 import { Carousel } from "antd";
 import type { CarouselRef } from "antd/es/carousel";
 import { motion, useInView } from "framer-motion"
-import Banner from "./components/Banner";
-import DataPark from "./components/DataPark";
-import TapAz from "./components/TapAz";
-import VueCommerce from "./components/VueCommerce";
-import VueDashboard from "./components/VueDashboard";
-import BlankSpace from "./components/BlankSpace";
+import Landing from "./components/landing";
+import DataPark from "./components/data-park";
+import TapAz from "./components/tap-az";
+import VueCommerce from "./components/vue-commerce";
+import VueDashboard from "./components/vue-dashboard";
+import BlankSpace from "./components/blank-space";
 
 
 export default function HomePage() {
@@ -78,7 +78,7 @@ export default function HomePage() {
                             className=""
                         >
                         </motion.div>
-                        <Banner />
+                        <Landing />
                     </div>
                     <div className="h-[90vh] flex items-center justify-center lg:px-9 overflow-x-hidden">
                         <motion.div
@@ -144,7 +144,7 @@ export default function HomePage() {
             </div>
             <div className=" lg:hidden overflow-x-hidden">
                 <div className=" h-[40vh] sm:h-[50vh] ur:h-[70vh] w-full flex items-center justify-center ">
-                    <Banner />
+                    <Landing />
                 </div>
                 <motion.div
                     ref={ref7}

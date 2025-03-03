@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useHeaderData } from "../useHeaderData";
 import { Dropdown } from "antd";
-import LocaleSwitcher from "@/components/local-switcher/LocaleSwitcher";
+import LocaleSwitcher from "@/components/local-switcher";
 import { FaChevronRight } from "react-icons/fa6";
 
 
@@ -32,13 +32,13 @@ export default function DesktopHeader() {
                                             key: sub.id,
                                             label: (
                                                 <div className="hover-olan group relative py-[5px] pl-[12px]   hover:bg-[#fff] rounded-md">
-                                                    <span style={{ textShadow: 'none' }} className="group-hover:text-[#ff4e08c0] text-myBlack font-semibold flex items-center justify-between">{sub.name} <FaChevronRight  size={12} /></span>
+                                                    <span style={{ textShadow: 'none' }} className="group-hover:text-[#ff4e08c0] text-myBlack font-semibold flex items-center justify-between">{sub.name} <FaChevronRight size={12} /></span>
                                                     <div className="visible-olan group-hover:block hidden   pl-4  absolute top-0 left-[99.5px] ">
                                                         <div className="bg-[#dbeafe] py-1 px-1  ">
                                                             {sub.items?.map((subItem) => (
                                                                 <span key={subItem.href}>
                                                                     <Link className="hover:text-[#ff4e08c0] hover:bg-[#fff] pl-3  block font-semibold text-sm rounded-md py-1 px-2" style={{ textShadow: 'none' }} href={subItem.href}>
-                                                                        {subItem.name} 
+                                                                        {subItem.name}
                                                                     </Link>
                                                                 </span>
                                                             ))}

@@ -1,11 +1,10 @@
 import Image from "next/image";
-// import { FiExternalLink } from "react-icons/fi";
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react";
 import { FaAnglesDown } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
 
-export default function Banner() {
+export default function Landing () {
     const t = useTranslations("landing")
 
     const ref1 = useRef(null)

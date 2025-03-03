@@ -3,21 +3,24 @@
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
 import React, {  useEffect, useState } from 'react'
-import List from './components/questions/List'
-import { interviewTopics } from './components/questions/links'
+import List from './components/list'
+import { interviewTopics } from './components/links'
 import { formatUrl } from '@/utils/formatUrl'
-import { CssQuestions } from './components/questions/css-questions'
-import { HtmlQuestions } from './components/questions/html-questions'
-import { JSQuestions } from './components/questions/js-questions'
-import { NextQuestions } from './components/questions/next-questions'
-import { ReactQuestions } from './components/questions/react-questions'
-import { TSQuestions } from './components/questions/ts-questions'
-import { GeneralQuestions } from './components/questions/general-questions'
+import { CssQuestions } from './components/my-questions/css-questions'
+import { HtmlQuestions } from './components/my-questions/html-questions'
+import { JSQuestions } from './components/my-questions/js-questions'
+import { NextQuestions } from './components/my-questions/next-questions'
+import { ReactQuestions } from './components/my-questions/react-questions'
+import { TSQuestions } from './components/my-questions/ts-questions'
+import { GeneralQuestions } from './components/my-questions/general-questions'
 
 type TAnswer = {
     type: string,
+    title?: string,
+    header?: string,
     content: string,
-    language?: string
+    language?: string,
+    lists?: { list: string }[]
 }
 type TQuestion = {
     id: number
@@ -25,7 +28,7 @@ type TQuestion = {
     answer: TAnswer[]
 }
 
-export default function Interview() {
+export default function Questions() {
     const [questions, setQuestions] = useState<TQuestion[]>([]);
     const params = useParams()
     const url = params!.params![0]

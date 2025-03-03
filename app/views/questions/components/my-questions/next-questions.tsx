@@ -2,6 +2,7 @@
 
 type TAnswer = {
     type: string,
+    title?: string,
     content: string,
     language? : string
 }

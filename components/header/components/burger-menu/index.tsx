@@ -3,7 +3,7 @@ import { useHeaderData } from "../useHeaderData";
 import { Drawer } from "antd";
 import { useState } from "react";
 import Link from "next/link";
-import LocaleSwitcher from "@/components/local-switcher/LocaleSwitcher";
+import LocaleSwitcher from "@/components/local-switcher";
 import { useParams } from "next/navigation";
 import { motion } from "framer-motion"
 import { FaAngleDown } from "react-icons/fa";
@@ -51,7 +51,7 @@ export default function BurgerMenu() {
                     <div className='bg-[#dbeafe] flex flex-col ml-3   p-1' key={item.id}>
                       <h4 onClick={() => handleLinkClick(item.id)} style={{ textShadow: 'none' }} className="text-myBlack hover:text-[#ff4e08c0] font-semibold p-1  flex items-center justify-between " >
                         {item.name}
-                        <FaAngleDown className={`${expanded === item.id ? "rotate-180": ""}`} />
+                        <FaAngleDown className={`${expanded === item.id ? "rotate-180" : ""}`} />
                       </h4>
                       <motion.div
                         initial={{ height: "0px", }}

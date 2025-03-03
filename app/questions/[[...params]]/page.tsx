@@ -1,11 +1,10 @@
-import Interview from '@/app/views/interview/interview'
+import Questions from '@/app/views/questions'
 import React from 'react'
 
 export default function page() {
   return (
     <div >
-        
-        <Interview />
+        <Questions />
     </div>
   )
 }
