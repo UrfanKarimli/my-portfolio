@@ -148,7 +148,6 @@ export const JSQuestions = {
                 answer: [
                     {
                         type: "text",
-                        header: "Prototype-based OOP",
                         title: "Prototip Əsaslı Obyekt Yönümlü Proqramlaşdırma",
                         content: "Prototip əsaslı obyekt yönümlü proqramlaşdırma, JavaScript-in əsas obyekt yönümlü proqramlaşdırma anlayışıdır. Bu yanaşmada, obyektlər bir-birindən prototiplər vasitəsilə miras alır. JavaScript-də bir obyektin özünün prototipi olur və bu prototip digər obyektlərdən xüsusiyyətləri və metodları miras alır.",
                         lists: [

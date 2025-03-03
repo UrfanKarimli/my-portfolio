@@ -50,36 +50,36 @@ export default function List(item: TQuestion) {
                 className="overflow-hidden bg-[#EEE8AA]  will-change-[transform,opacity] "
             >
                 <div className=' p-2'>
-                {item?.answer?.map((item, index) => (
-                    <div key={index} >
-                        
-                       
-                        {item.header && <p style={{ textShadow: 'none'}} className="font-bold text-base ur:text-xl pt-2 pl-10">{item.header}</p>}
-                        {item.title && <p style={{ textShadow: 'none'}} className="font-bold text-sm ur:text-base  flex items-center gap-1 "><BsPinAngleFill /> {item.title}</p>}
-                        {item.type === "text" ? (
-                            item.content &&
-                            <p
-                                style={{ textShadow: 'none', textIndent: '10px' }}
-                                className='text-xs ur:text-sm text-[#000]  text-justify py-1 '
-                            >
-                                {item.content}
-                            </p>
-                        ) : (
-                            <CodeBlock language={item.language || "plaintext"} code={item.content} />
-                        )}
-                         {item.lists && <ul >
-                            {
-                                item.lists?.map((li, index)=> (
-                                    <li className='text-xs ur:text-sm text-[#000]  text-justify pl-1' style={{ textShadow: 'none'}} key={index}> - {li.list}</li>
-                                ))
-                            }
+                    {item?.answer?.map((item, index) => (
+                        <div key={index} >
+
+
+                            {item.header && <p style={{ textShadow: 'none' }} className="font-bold text-sm ur:text-xl py-2 pl-5">{item.header}</p>}
+                            {item.title && <p style={{ textShadow: 'none' }} className="font-bold text-xs ur:text-base  flex items-start gap-1 leading-3 ur:leading-4 "><BsPinAngleFill className=' size-3 text-myYellow' /> {item.title}</p>}
+                            {item.type === "text" ? (
+                                item.content &&
+                                <p
+                                    style={{ textShadow: 'none', textIndent: '10px' }}
+                                    className='text-xs ur:text-sm text-[#000]  text-justify py-1 '
+                                >
+                                    {item.content}
+                                </p>
+                            ) : (
+                                <CodeBlock language={item.language || "plaintext"} code={item.content} />
+                            )}
+                            {item.lists && <ul >
+                                {
+                                    item.lists?.map((li, index) => (
+                                        <li className='text-xs ur:text-sm text-[#000]  text-justify pl-1' style={{ textShadow: 'none' }} key={index}> - {li.list}</li>
+                                    ))
+                                }
                             </ul>}
-                    </div>
-                ))}
-                
+                        </div>
+                    ))}
                 </div>
             </motion.div>
         </li>
     )
+
 }
 
