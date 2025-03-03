@@ -22,7 +22,7 @@ export default function DesktopHeader() {
                         ) : (
                             <li key={item.id} className='flex space-x-4 font-roboto'>
                                 <Dropdown
-                                    open={true}
+                                    // open={true}
                                     overlayClassName="antd-dropdown "
                                     overlayStyle={{
                                         top: "50px",
