@@ -5,7 +5,7 @@ export default async function getRequestConfig() {
   // cookies API-dən locale-ni alırıq
   const cookieStore = await cookies(); // await əlavə edirik
 
-  const locale = cookieStore.get('uk-locale')?.value || 'az'; // locale cookie-sini alırıq, yoxsa default olaraq 'az'
+  const locale = cookieStore.get('uk-locale')?.value || 'en'; // locale cookie-sini alırıq, yoxsa default olaraq 'en'
 
   // Mesajları yükləyirik
   const messages = await loadMessages(locale);

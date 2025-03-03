@@ -30,7 +30,7 @@ export function useHeaderData() {
       submenu: [
         {
           id: 1,
-          name: "Suallar",
+          name: t("questions"),
           items: [
             { name: 'HTML', url: 'html', href: '/knowledge-hub/html', },
             { name: 'CSS', url: 'css', href: '/knowledge-hub/css', },
@@ -40,7 +40,12 @@ export function useHeaderData() {
             { name: 'Next.js',url: 'next_js', href: '/knowledge-hub/next_js', },
             // { name: 'General',url: 'general', href: '/knowledge-hub/general', }
           ]
-        }
+        },
+        // {
+        //   id: 2,
+        //   name: "test",
+        //   items: []
+        // }
       ]
     },
   ];

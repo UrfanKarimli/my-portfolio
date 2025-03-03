@@ -3,11 +3,19 @@
 @tailwind utilities;
 
 
+.antd-dropdown ul{
+  border-radius: 0px !important;
+  background-color: #dbeafe !important;
+  overflow: visible !important;
+}
 
+.antd-dropdown ul li {
+  padding: 0 !important;
+}
 .ant-drawer-content {
-  border-left-width: 1px;
-  border-left-style: solid;
-  border-left: #ff4f08 ;
+  border-left-width: 1px !important;
+  border-left-style: solid !important;
+  border-left: #ff4f08 !important;
   background-color: #3b54f3 !important; 
 }
 *{

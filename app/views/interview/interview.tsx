@@ -85,7 +85,9 @@ export default function Interview() {
                 </nav>
             </aside>
             <div className=' mt-5  bg-myWhite rounded-lg py-8 px-12 w-full' >
-                <h1 className='text-2xl font-semibold text-myBlack '> {formatUrl(url)} <span className=' lowercase'>ilə bağlı suallar</span> </h1>
+                <h1 style={{ textShadow: 'none' }} className='text-2xl font-semibold text-myYellow '> {formatUrl(url)} <span style={{ textShadow: 'none' }} className=' lowercase'>ilə bağlı suallar</span> </h1>
+                
+                
                 <ol className=' flex-col items-start gap-4 my-1  '>
                     {questions?.map((item) => (
                         <List key={item.id} {...item} />

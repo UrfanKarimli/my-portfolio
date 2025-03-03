@@ -44,15 +44,13 @@ export default function List(item: TQuestion) {
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 className="overflow-hidden   will-change-[transform,opacity]"
             >
-                <div style={{ textShadow: 'none' }} className='text-sm text-[#000] border bg-[#EEE8AA] py-2  text-justify px-2'>
                     {item?.answer?.map((item, index)=>
                     item.type === "text" ? (
-                        <p key={index}>{item.content}</p>
+                        <p style={{ textShadow: 'none' }} className='text-sm text-[#000] border bg-[#EEE8AA] py-2  text-justify px-2' key={index}>{item.content}</p>
                     ) : (
                         <CodeBlock key={index}  language={item.language || "plaintext"} code={ item.content}/>
                     )
                     )}
-                </div>
             </motion.div>
         </li>
     )
