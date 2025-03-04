@@ -19,10 +19,10 @@ export function useHeaderData() {
     },
     {
       id: 3,
-      name: <div style={{ textShadow: 'none' }} className="text-base font-bold ur:font-normal ur:bg-myBlack p-[2px] pl-1 rounded-md text-myWhite cursor-pointer">
+      name: <div  className="no-shadow text-base font-bold ur:font-normal ur:bg-myBlack p-[2px] pl-1 rounded-md text-myWhite cursor-pointer">
         {t("knowledge")}
         <span
-          style={{ textShadow: 'none' }}
+          
           className="ml-px font-bold bg-[#ffa31a] text-myBlack px-[2px] py-px rounded-sm leading-normal">
           {t("hub")}
         </span>
@@ -37,7 +37,7 @@ export function useHeaderData() {
             { name: 'JavaScript',url: 'java-script', href: '/questions/java-script', },
             { name: 'TypeScript',url: 'type-script', href: '/questions/type-script', },
             { name: 'React.js',url: 'react_js', href: '/questions/react_js', },
-            { name: 'Next.js',url: 'next_js', href: '/questions/next_js', },
+            // { name: 'Next.js',url: 'next_js', href: '/questions/next_js', },
             // { name: 'General',url: 'general', href: '/questions/general', }
           ]
         },

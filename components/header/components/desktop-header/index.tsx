@@ -31,13 +31,13 @@ export default function DesktopHeader() {
                                         items: item.submenu?.map((sub) => ({
                                             key: sub.id,
                                             label: (
-                                                <div className="hover-olan group relative py-[5px] pl-[12px]   hover:bg-[#fff] rounded-md">
-                                                    <span style={{ textShadow: 'none' }} className="group-hover:text-[#ff4e08c0] text-myBlack font-semibold flex items-center justify-between">{sub.name} <FaChevronRight size={12} /></span>
+                                                <div className="no-shadow hover-olan group relative py-[5px] pl-[12px]   hover:bg-[#fff] rounded-md">
+                                                    <span  className="group-hover:text-[#ff4e08c0] text-myBlack font-semibold flex items-center justify-between">{sub.name} <FaChevronRight size={12} /></span>
                                                     <div className="visible-olan group-hover:block hidden   pl-4  absolute top-0 left-[99.5px] ">
                                                         <div className="bg-[#dbeafe] py-1 px-1  ">
                                                             {sub.items?.map((subItem) => (
                                                                 <span key={subItem.href}>
-                                                                    <Link className="hover:text-[#ff4e08c0] hover:bg-[#fff] pl-3  block font-semibold text-sm rounded-md py-1 px-2" style={{ textShadow: 'none' }} href={subItem.href}>
+                                                                    <Link className="hover:text-[#ff4e08c0] hover:bg-[#fff] pl-3  block font-semibold text-sm rounded-md py-1 px-2"  href={subItem.href}>
                                                                         {subItem.name}
                                                                     </Link>
                                                                 </span>

@@ -1,13 +1,14 @@
+import { ReactNode } from "react"
 
 
 
 type TAnswer = {
     type: string,
-    content: string,
-    title?: string,
-    header?: string,
+    header?: string | ReactNode,
+    title?: string | ReactNode,
+    content: string ,
     language?: string,
-    lists?: { list: string }[]
+    lists?: { list: string | ReactNode }[]
 }
 type TQuestion = {
     id: number
@@ -31,14 +32,19 @@ export const GeneralQuestions = {
                         lists: [
                             {
                                 list: "",
-                            }
+                            },
+                            {
+                                list: "",
+                            },
                         ]
                     },
                     {
                         type: "code",
+                        header: "",
                         title: "",
-                        content: "",
-                        language: "javascript"
+                        content: `                        
+                        `,
+                        language: "tsx"
                     },
                 ]
             },

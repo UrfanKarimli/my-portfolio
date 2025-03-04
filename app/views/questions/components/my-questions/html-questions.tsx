@@ -1,15 +1,19 @@
+import { ReactNode } from "react"
 
 type TAnswer = {
     type: string,
-    title?: string,
-    content: string,
-    language? : string
+    header?: string | ReactNode,
+    title?: string | ReactNode,
+    content: string ,
+    language?: string,
+    lists?: { list: string | ReactNode }[]
 }
 type TQuestion = {
     id: number
     question: string
     answer: TAnswer[]
 }
+
 
 export const HtmlQuestions = {
     questions(): TQuestion[] {
@@ -233,7 +237,64 @@ export const HtmlQuestions = {
                         language: "html"
                     }
                 ]
+            },
+            {
+                id: 16,
+                question: "HTML5 Yenilikləri",
+                answer: [
+                    {
+                        type: "text",
+                        header: "HTML5 Nədir?",
+                        title: "HTML5-in əsas xüsusiyyətləri",
+                        content: "HTML5, veb səhifələrini yaratmaq üçün istifadə olunan HTML-nin son versiyasıdır. HTML5, daha dinamik və interaktiv veb tətbiqetmələri yaratmaq üçün bir çox yeni xüsusiyyət və etiketlər təqdim edir.",
+                        lists: [
+                            {
+                                list: "Yeni Semantik Etiketlər: `<header>`, `<footer>`, `<article>`, `<section>` və s.",
+                            },
+                            {
+                                list: "Multimedia Dəstəyi: `<audio>`, `<video>` etiketləri ilə multimedia məzmununu veb səhifələrində daha asan yerləşdirmək mümkündür.",
+                            },
+                            {
+                                list: "Formalar üçün yeni etiketlər: `<input type=\"date\">`, `<input type=\"email\">`, `<input type=\"range\">` kimi yeni form elementləri ilə daha müasir və istifadəçi dostu formalar yaratmaq mümkündür.",
+                            },
+                            {
+                                list: "Canvas və SVG: `<canvas>` etiqeti ilə 2D şəkillər çəkmək və manipulyasiya etmək mümkündür.",
+                            },
+                            {
+                                list: "Local Storage: Veb tətbiqləri üçün yerli saxlama imkanları ilə istifadəçi məlumatlarını brauzer tərəfdə saxlayın.",
+                            },
+                            {
+                                list: "Geolocation API: İstifadəçinin coğrafi mövqeyini əldə etməyə imkan verir.",
+                            },
+                        ]
+                    },
+                    {
+                        type: "code",
+                        header: "HTML5 Kodu Nümunəsi",
+                        title: "HTML5-də yeni etiketlərin istifadəsi",
+                        content: `
+                        <article>
+                            <header>
+                                <h1>HTML5 Yenilikləri</h1>
+                            </header>
+                            <section>
+                                <h2>Semantik Etiketlər</h2>
+                                <p>HTML5 semantik etiketlər veb səhifələrini daha əlçatan və SEO dostu edir.</p>
+                            </section>
+                            <section>
+                                <h2>Multimedia Dəstəyi</h2>
+                                <p>HTML5, <audio> və <video> etiketləri ilə multimedia məzmununu birbaşa səhifələrə yerləşdirməyə imkan verir.</p>
+                            </section>
+                            <footer>
+                                <p>© 2025 HTML5 Yenilikləri</p>
+                            </footer>
+                        </article>
+                        `,
+                        language: "html"
+                    },
+                ]
             }
+            
         ];
         
         

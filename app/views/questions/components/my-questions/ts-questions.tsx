@@ -1,11 +1,14 @@
+import { ReactNode } from "react"
 
 
 
 type TAnswer = {
     type: string,
-    title?: string,
-    content: string,
-    language? : string
+    header?: string | ReactNode,
+    title?: string | ReactNode,
+    content: string ,
+    language?: string,
+    lists?: { list: string | ReactNode }[]
 }
 type TQuestion = {
     id: number
@@ -22,8 +25,223 @@ export const TSQuestions = {
                 answer: [
                     {
                         type: "text",
-                        content: "Interface və type annotation arasında əsas fərq budur: Interface yalnız obyekt strukturlarını müəyyən edir və genelliklə genişləndirilə bilər (extends), amma type annotation daha ümumi və müxtəlif növ təyin etməyə imkan verir. Type bir çox növü birləşdirə bilər, məsələn, union və intersection növləri."
-                    }
+                        content: "TypeScript-də interface və type annotation çox oxşar məqsədlər üçün istifadə olunsa da, aralarında bəzi mühüm fərqlər var. Gəlin, onların arasındakı fərqləri detallı şəkildə araşdıraq."
+                    },
+                    {
+                        type: "text",
+                        header: "1. Oxşarlıqlar",
+                        title: "",
+                        content: "",
+                        lists: [
+                            {
+                                list: "Hər ikisi obyektin strukturunu təyin etmək üçün istifadə olunur.",
+                            },
+                            {
+                                list: "Hər ikisi miras alma və birlikdə istifadə olunma imkanlarına malikdir.",
+                            },
+                            {
+                                list: "Hər ikisi readonly, optional properties kimi xüsusiyyətləri dəstəkləyir.",
+                            },
+                        ]
+                    },
+                    {
+                        type: "code",
+                        header: "",
+                        title: "Misal:",
+                        content: `                        
+// Interface ilə obyektin strukturunun təyin edilməsi
+interface User {
+  name: string;
+  age: number;
+}
+
+const user1: User = { name: "Ali", age: 25 };
+
+// Type ilə obyektin strukturunun təyin edilməsi
+type UserType = {
+  name: string;
+  age: number;
+};
+
+const user2: UserType = { name: "Leyla", age: 22 };
+                        `,
+                        language: "typescript"
+                    },
+                    {
+                        type: "text",
+                        header: "2. Fərqlər",
+                        title: "2.1. Interface genişləndirilə bilər (extend), Type isə birləşdirilə bilər (union & intersection)",
+                        content: "",
+                        lists: [
+                            {
+                                list: "interface extends açar sözü ilə digər interfeyslərdən miras ala bilər.",
+                            },
+                            {
+                                list: "type isə & (intersection) operatoru ilə yeni strukturlar yarada bilər.",
+                            },
+                        ]
+                    },
+                    {
+                        type: "code",
+                        header: "",
+                        title: "Misal: interface extends",
+                        content: `                        
+interface Person {
+  name: string;
+}
+
+interface Employee extends Person {
+  position: string;
+}
+
+const emp: Employee = { name: "Kamran", position: "Developer" };
+                        `,
+                        language: "typescript"
+                    },
+                    {
+                        type: "code",
+                        header: "",
+                        title: "Misal: type & intersection",
+                        content: `                        
+type Person = {
+  name: string;
+};
+
+type Employee = Person & {
+  position: string;
+};
+
+const emp: Employee = { name: "Kamran", position: "Developer" };
+                        `,
+                        language: "typescript"
+                    },
+                    {
+                        type: "text",
+                        content:" Burada hər ikisi eyni nəticəni verir, lakin interface extends daha aydın olur."
+                    },
+                    {
+                        type: "text",
+                        header: "",
+                        title: "2.2. Interface implements ilə istifadə edilə bilər",
+                        content: "",
+                        lists: [
+                            {
+                                list: "interface siniflər (class-lar) tərəfindən implements açar sözü ilə istifadə edilə bilər.",
+                            },
+                            {
+                                list: <span>type isə implements üçün uyğun deyil.</span>,
+                            },
+                        ]
+                    },
+                    {
+                        type: "code",
+                        header: "",
+                        title: "Misal:",
+                        content: `                        
+interface Animal {
+  name: string;
+  makeSound(): void;
+}
+
+class Dog implements Animal {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+  makeSound() {
+    console.log("Woof!");
+  }
+}
+
+const myDog = new Dog("Rex");
+myDog.makeSound(); // Woof!
+                        `,
+                        language: "typescript"
+                    },
+                    {
+                        type: "text",
+                        content:"Burada Animal interfeysini sinif (class) implements edərək tərif edir. type bunu edə bilmir."
+                    },
+                    {
+                        type: "text",
+                        header: "",
+                        title: "2.3. Type daha çevikdir: Union və Tuple dəstəyi var",
+                        content: "",
+                        lists: [
+                            {
+                                list: "type yalnız obyektlər üçün deyil, həm də union (birlik) və tuple tipli verilənlər üçün istifadə edilə bilər.",
+                            },
+                            {
+                                list: "interface isə yalnız obyekt tiplərini təyin etmək üçündür.",
+                            },
+                        ]
+                    },
+                    {
+                        type: "code",
+                        header: "",
+                        title: "Misal: Union Type",
+                        content: `                        
+type Status = "success" | "error" | "loading"; // Union
+let currentStatus: Status = "success";
+                        `,
+                        language: "typescript"
+                    },
+                    {
+                        type: "code",
+                        header: "",
+                        title: "Misal: Tuple Type",
+                        content: `                        
+type Point = [number, number];
+const coord: Point = [10, 20]; // Tuple
+                        `,
+                        language: "typescript"
+                    },
+                    {
+                        type: "text",
+                        header: "",
+                        title: "2.4. Interface avtomatik birləşdirilə bilər, Type isə yox",
+                        content: "",
+                        lists: [
+                            {
+                                list: "interface dəfələrlə elan edilərsə, TypeScript onları avtomatik birləşdirir (declaration merging).",
+                            },
+                            {
+                                list: "type isə bu xüsusiyyəti dəstəkləmir.",
+                            },
+                        ]
+                    },
+                    {
+                        type: "code",
+                        header: "",
+                        title: "Misal: Declaration Merging (interface)",
+                        content: `                        
+     interface Car {
+  brand: string;
+}
+
+interface Car {
+  year: number;
+}
+
+const myCar: Car = { brand: "BMW", year: 2023 }; // İki interface birləşdirildi
+                   `,
+                        language: "typescript"
+                    },
+                    {
+                        type: "code",
+                        header: "",
+                        title: "Bu xüsusiyyət type üçün mümkün deyil:",
+                        content: `                        
+type Car = {
+  brand: string;
+};
+
+type Car = {  // XƏTA: Duplicate identifier 'Car'
+  year: number;
+};
+                        `,
+                        language: "typescript"
+                    },
                 ]
             },
             {
@@ -227,13 +445,54 @@ export const TSQuestions = {
                 answer: [
                     {
                         type: "text",
-                        content: "Function overloads, eyni funksiya adını fərqli parametrlər və ya qaytarılan dəyərlərlə təkrarlamağa imkan verir. Məsələn, `function greet(name: string): string; function greet(age: number): number;`"
+                        content:"Function Overloading (Funksiya aşırı yüklənməsi) TypeScript-də eyni adda, amma fərqli parametrlərlə işləyən bir neçə funksiya elan etməyə imkan verən bir xüsusiyyətdir."
+                    },
+                    {
+                        type: "text",
+                        header: "Function Overloading necə işləyir?",
+                        title: "",
+                        content: "TypeScript-də function overloads üç əsas hissədən ibarətdir:",
+                        lists: [
+                            {
+                                list: "1. Overload imzaları (function signatures)",
+                            },
+                            {
+                                list: "2. Əsas funksiya (implementation)",
+                            },
+                            {
+                                list: "3. Return dəyərləri (nəticələr)",
+                            },
+                        ]
                     },
                     {
                         type: "code",
-                        content: "function greet(name: string): string; function greet(age: number): number;",
+                        header: "",
+                        title: "Misal:",
+                        content: `                        
+// 1. Overload imzaları
+function getInfo(name: string): string;
+function getInfo(age: number): number;
+function getInfo(name: string, age: number): string;
+
+// 2. Əsas funksiya (implementation)
+function getInfo(param1: string | number, param2?: number): string | number {
+    if (typeof param1 === "string" && param2 === undefined) {
+        return 'Ad: $ {param1}';
+    } else if (typeof param1 === "number") {
+        return param1; // Yaşı qaytarır
+    } else if (typeof param1 === "string" && typeof param2 === "number") {
+        return 'Ad: $ {param1}, Yaş: $ {param2}';
+    }
+    return "Yanlış məlumat";
+}
+
+// 3. Funksiyanı fərqli yollarla çağırmaq
+console.log(getInfo("Eli"));         // Ad: Eli
+console.log(getInfo(25));            // 25
+console.log(getInfo("Leyla", 30));   // Ad: Leyla, Yaş: 30
+                        `,
                         language: "typescript"
-                    }
+                    },
                 ]
             },
             {
@@ -242,8 +501,81 @@ export const TSQuestions = {
                 answer: [
                     {
                         type: "text",
-                        content: "Static initialization block, sinifin statik üzvlərini ilkin dəyərlərlə təmin etmək üçün istifadə olunur. Bu xüsusiyyət yalnız Java və digər bəzi dillərdə mövcuddur, TypeScript-də isə buna bənzər bir sintaksis yoxdur."
-                    }
+                        content: "Static Initialization Block (static {}), ES2022 (ECMAScript 2022) versiyası ilə JavaScript və TypeScript-ə əlavə olunmuş bir xüsusiyyətdir. Bu blok, sinifin (class) statik dəyişənlərini (static properties) və ya statik loqaritmlərini təyin etmək üçün istifadə olunur."
+                    },
+                    {
+                        type: "text",
+                        header: "1. Static Initialization Block-un əsas məqsədi",
+                        title: "",
+                        content: "",
+                        lists: [
+                            {
+                                list: "✅ Statik dəyişənlərə kompleks dəyərlər vermək",
+                            },
+                            {
+                                list: "✅ Statik dəyişənlər arasında əlaqə qurmaq",
+                            },
+                            {
+                                list: "✅ Sinif yüklənərkən bir dəfə işləyən loqaritmlər icra etmək",
+                            },
+                        ]
+                    },
+                    {
+                        type: "code",
+                        header: "2. Syntax və İş Prinsipi",
+                        title: "",
+                        content: `                        
+class Example {
+    static value: number;
+    
+    // Static Initialization Block
+    static {
+        console.log("Static block işləyir...");
+        Example.value = Math.random() * 100; // Random dəyər təyin edirik
+    }
+}
+
+console.log(Example.value); // Məsələn: 42.3456789
+                        `,
+                        language: "typescript"
+                    },
+                    {
+                        type: "text",
+                        header: "",
+                        title: "",
+                        content: "İş prinsipi:",
+                        lists: [
+                            {
+                                list: "Sinif yüklənərkən (class ilk dəfə çağırıldıqda), static {} bloku bir dəfə icra olunur.",
+                            },
+                            {
+                                list: "Statik dəyişənlər kompleks məntiq əsasında təyin edilə bilər.",
+                            },
+                            {
+                                list: "Bu blok sinif nümunəsi (instance) yaradılmadan da işləyir!",
+                            },
+                        ]
+                    },
+                    {
+                        type: "text",
+                        header: "",
+                        title: "Static Initialization Block (static {}) nə üçün istifadə edilir?",
+                        content: "Əgər TypeScript kodunda bir sinifin statik dəyişənlərini tək blokda təyin etmək istəyirsənsə, static {} ən yaxşı həllərdən biridir! 🚀",
+                        lists: [
+                            {
+                                list: "✅ Kompleks statik dəyişənlər üçün",
+                            },
+                            {
+                                list: "✅ Mürəkkəb loqaritmlər icra etmək üçün",
+                            },
+                            {
+                                list: "✅ Daha oxunaqlı və modulyar kod yazmaq üçün",
+                            },
+                            {
+                                list: "✅ Əlavə funksiyalar (initialize()) yazmaqdan qaçmaq üçün",
+                            },
+                        ]
+                    },
                 ]
             },
             {
@@ -268,7 +600,81 @@ export const TSQuestions = {
                     {
                         type: "text",
                         content: "Generics, funksiyalar və siniflər üçün növ parametrləri istifadə etməyə imkan verərkən, inheritance daha çox mövcud siniflərin genişləndirilməsinə və dəyişdirilməsinə yönəlir. Generics daha çevik və təkrarlanabilir kod yaratmağa kömək edir."
-                    }
+                    },
+                    {
+                        type: "text",
+                        header: "",
+                        title: "Generics istifadə etməli olduğun hallar:",
+                        content: "",
+                        lists: [
+                            {
+                                list: "✅ Eyni kodu fərqli tiplərlə işlətmək lazımdırsa",
+                            },
+                            {
+                                list: "✅ Bir obyektin və ya sinifin spesifik tipini saxlamadan işləmək istəyirsənsə",
+                            },
+                            {
+                                list: "✅ Interfeys və funksiyalarla istifadə etmək istəyirsənsə",
+                            },
+                        ]
+                    },
+                    {
+                        type: "code",
+                        header: "",
+                        title: "Misal: Fərqli tip məlumatlarla işləyən Stack (yığılım) sinifi",
+                        content: `                        
+class Stack<T> {
+    private items: T[] = [];
+
+    push(item: T) {
+        this.items.push(item);
+    }
+
+    pop(): T | undefined {
+        return this.items.pop();
+    }
+}
+
+const numberStack = new Stack<number>();
+numberStack.push(10);
+numberStack.push(20);
+console.log(numberStack.pop()); // 20
+                        `,
+                        language: "typescript"
+                    },
+                    {
+                        type: "text",
+                        header: "",
+                        title: "Inheritance istifadə etməli olduğun hallar:",
+                        content: "",
+                        lists: [
+                            {
+                                list: "✅ Bir sinfin xüsusiyyətlərini genişləndirmək lazımdırsa",
+                            },
+                            {
+                                list: "✅ Obyektlər arasında əlaqə qurmaq istəyirsənsə",
+                            },
+                            {
+                                list: "✅ Polymorphism tətbiq etmək istəyirsənsə (eyni metodun fərqli siniflərdə fərqli işləməsi)",
+                            },
+                        ]
+                    },
+                    {
+                        type: "code",
+                        header: "",
+                        title: "Misal: Fərqli heyvan növləri üçün Animal sinifindən miras alan siniflər",
+                        content: `                        
+class Cat extends Animal {
+    makeSound() {
+        console.log("Meow!");
+    }
+}
+
+const myCat = new Cat("Whiskers");
+myCat.makeSound(); // "Meow!"
+                        `,
+                        language: "typescript"
+                    },
                 ]
             }
         ];

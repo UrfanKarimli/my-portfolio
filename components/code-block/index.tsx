@@ -26,7 +26,7 @@ export default function CodeBlock({ language, code }: CodeBlockProps) {
 
 
     return (
-        <div style={{ textShadow: 'none' }}  className="relative group  overflow-hidden px-1 ur:px-4">
+        <div style={{ textShadow: 'none' }}  className="relative group  overflow-x-scroll px-1 ur:px-4">
             <span className=" absolute top-2 right-12 ur:right-16 text-xs ur:text-base text-myWhite p-1 ">{language}</span>
             <button
                 onClick={handleCopy}
@@ -34,7 +34,7 @@ export default function CodeBlock({ language, code }: CodeBlockProps) {
             >
                 {copied ? <FaCheck className="text-green-400" /> : <FaRegCopy />}
             </button>
-            <SyntaxHighlighter  className=" text-xs ur:text-base" language={language} style={oneDark}>
+            <SyntaxHighlighter  className=" text-xs  syntax-highlighter" language={language} style={oneDark}>
                 {code}
             </SyntaxHighlighter>
         </div>

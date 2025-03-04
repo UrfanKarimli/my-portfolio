@@ -9,6 +9,11 @@
   overflow: visible !important;
 }
 
+.syntax-highlighter code {
+  
+  overflow: auto !important;
+}
+
 .antd-dropdown ul li {
   padding: 0 !important;
 }
@@ -21,7 +26,9 @@
 *{
   text-shadow: 5px 5px 10px #2b2a2a;
 }
-
+.no-shadow, .no-shadow * {
+  text-shadow: none !important;
+}
 .light-shadow {
   text-shadow: 5px 5px 10px #2b2a2a;
 }
