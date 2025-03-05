@@ -50,8 +50,8 @@ export default function List(item: TQuestion) {
                 <div className=' p-2 pb-4'>
                     {item?.answer?.map((item, index) => (
                         <div className=' w-full' key={index} >
-                            {item.header && <p className="font-bold text-sm ur:text-xl py-2 pl-5">{item.header}</p>}
-                            {item.title && <p className="font-bold text-xs ur:text-base  flex items-start gap-1 leading-3 ur:leading-4 "><BsPinAngleFill className=' size-3 text-myYellow' /> {item.title}</p>}
+                            {item.header && <p className="font-bold text-myBlack text-sm ur:text-xl py-2 pl-5">{item.header}</p>}
+                            {item.title && <p className="font-bold text-myBlack text-xs ur:text-base  flex items-start gap-1 leading-3 ur:leading-4 "><BsPinAngleFill className=' size-3 text-myYellow' /> {item.title}</p>}
                             {item.type === "text" ? (
                                 item.content &&
                                 <p
