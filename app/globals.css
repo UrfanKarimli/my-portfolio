@@ -9,11 +9,14 @@
   overflow: visible !important;
 }
 
-.syntax-highlighter code {
-  
-  overflow: auto !important;
-}
+/* .syntax-highlighter {
+  display: block !important;
+  overflow: scroll !important;
+} */
 
+.syntax-highlighter::-webkit-scrollbar {
+  width: 0;
+}
 .antd-dropdown ul li {
   padding: 0 !important;
 }
