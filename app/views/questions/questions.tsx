@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
-import React, {  ReactNode, useEffect, useState } from 'react'
+import React, { ReactNode, useEffect, useState } from 'react'
 import List from './components/list'
 import { interviewTopics } from './components/links'
 import { formatUrl } from '@/utils/formatUrl'
@@ -18,7 +18,7 @@ type TAnswer = {
     type: string,
     header?: string | ReactNode,
     title?: string | ReactNode,
-    content: string ,
+    content: string,
     language?: string,
     lists?: { list: string | ReactNode }[]
 }
@@ -55,7 +55,7 @@ export default function Questions() {
                 case "type-script":
                     data = await TSQuestions.getData();
                     break;
-                    case "general":
+                case "general":
                     data = await GeneralQuestions.getData();
                     break;
                 default:
@@ -70,13 +70,13 @@ export default function Questions() {
 
 
     return (
-        <div className='z-20 sticky mx-5 lg:mx-9 flex items-start ur:gap-4 overflow-hidden  h-full min-h-screen'>
-                <nav className='hidden ur:block sticky top-20  left-0  ' >
-                    <ul className="bg-myWhite flex flex-col ur:w-44 rounded-lg py-3">
+        <div className='z-20 sticky mx-5 lg:mx-9 flex items-start ur:gap-4  overflow-hidden  h-full min-h-screen'>
+            <article className='mt-5 hidden ur:block  w-56 '>
+                <nav className=' fixed top-20 left-5 lg:left-9  ' >
+                    <ul className="bg-myWhite flex flex-col w-44 rounded-lg py-3">
                         {interviewTopics.map((topic) => (
                             <li key={topic.url}>
                                 <Link className={`block no-shadow font-semibold text-sm ${url === topic.url ? 'text-myYellow hover:text-[#ff4e08c0] hover:bg-[#e3f7f4]' : 'text-myGray hover:text-myBlack hover:bg-[#eff3f3]'} rounded-md py-1 px-2`}
-                                    
                                     href={topic.href}
                                 >
                                     {topic.name}
@@ -85,8 +85,9 @@ export default function Questions() {
                         ))}
                     </ul>
                 </nav>
-            <div className=' mt-5 mb-10 bg-myWhite rounded-lg py-4 px-4 ur:py-8 ur:px-12 flex flex-col ' >
-                <h1  className='no-shadow ur:text-2xl text-center ur:text-start font-semibold text-myYellow '> {formatUrl(url)} <span  className=' lowercase'>ilə bağlı suallar</span> </h1>
+            </article>
+            <div className=' mt-5 mb-10 bg-myWhite rounded-lg py-4 px-4 w-full ur:py-8 ur:px-12 flex flex-col ' >
+                <h1 className='no-shadow ur:text-2xl text-center ur:text-start font-semibold text-myYellow '> {formatUrl(url)} <span className=' lowercase'>ilə bağlı suallar</span> </h1>
                 <ol className='flex flex-col items-start  my-1  '>
                     {questions?.map((item) => (
                         <List key={item.id} {...item} />
