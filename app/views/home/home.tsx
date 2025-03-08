@@ -15,7 +15,6 @@ import BlankSpace from "./components/blank-space";
 export default function HomePage() {
     const carouselRef = useRef<CarouselRef>(null);
     const [isScrolling, setIsScrolling] = useState(false);
-    const ref1 = useRef(null)
     const ref2 = useRef(null)
     const ref3 = useRef(null)
     const ref4 = useRef(null)
@@ -26,7 +25,6 @@ export default function HomePage() {
     const ref9 = useRef(null)
     const ref10 = useRef(null)
     const ref11 = useRef(null)
-    const inView1 = useInView(ref1)
     const inView2 = useInView(ref2)
     const inView3 = useInView(ref3)
     const inView4 = useInView(ref4)
@@ -69,15 +67,7 @@ export default function HomePage() {
                     infinite={false}
                 >
                     <div className="h-[90vh] w-full flex items-center justify-center lg:px-9 overflow-y-hidden ">
-                        <motion.div
-                            ref={ref1}
-                            initial={{ y: 250, opacity: 0 }}
-                            animate={inView1 ? { y: 0, opacity: 1 } : { y: 250, opacity: 0 }}
-                            transition={{ duration: 0.8 }}
-                            viewport={{ once: false }}
-                            className=""
-                        >
-                        </motion.div>
+                        
                         <Landing />
                     </div>
                     <div className="h-[90vh] flex items-center justify-center lg:px-9 overflow-x-hidden">
