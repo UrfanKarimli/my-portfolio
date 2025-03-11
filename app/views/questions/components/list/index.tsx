@@ -45,9 +45,9 @@ export default function List(item: TQuestion) {
                 }
                 exit={{ height: "0px", opacity: 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className=" bg-[#EEE8AA] w-full   will-change-[transform,opacity] "
+                className=" bg-listBg w-full   will-change-[transform,opacity] "
             >
-                <div className=' p-2 pb-4'>
+                <div className=' p-2 pb-5'>
                     {item?.answer?.map((item, index) => (
                         <div className=' w-full' key={index} >
                             {item.header && <p className="font-bold text-myBlack text-sm ur:text-xl py-2 pl-5">{item.header}</p>}
@@ -73,8 +73,9 @@ export default function List(item: TQuestion) {
                         </div>
                     ))}
                 </div>
-                <span onClick={() => handleLinkClick(item.id)} className='absolute cursor-pointer text-xs ur:text-base right-1 bottom-px text-red-600 flex items-center gap-1'>Bağla <FaPlus
-                    className={`ur:text-2xl   rotate-[-45deg]`}
+                <span onClick={() => handleLinkClick(item.id)} className='absolute cursor-pointer text-xs ur:text-base right-1 bottom-px text-red-600 flex items-center gap-1'>
+                    Bağla 
+                    <FaPlus className={`ur:text-2xl   rotate-[-45deg]`}
                 /></span>
             </motion.div>
         </li>

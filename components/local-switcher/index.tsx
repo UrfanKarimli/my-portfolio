@@ -29,8 +29,6 @@ export default function LocaleSwitcher() {
         setLocaleActive(arg);
     };
 
-
-
     if (isPending) {
         return <Spinner />
     }
@@ -45,13 +43,13 @@ export default function LocaleSwitcher() {
                 {
                     localeActive === 'az' ? (
                         <a className=' ur:animate-pulse ur:text-sm  ur:border border-myBlack ur:bg-myBlack ur:hover:bg-white ur:hover:text-myBlack ur:py-[2px] ur:px-2 text-white font-medium  flex items-center gap-2 rounded-md '
-                            download={'Urfan-Kerimli-az.pdf'} href="/Urfan-Kerimli-az.pdf">
+                            download={'UrfanKarimliAz.pdf'} href="/UrfanKarimliAz.pdf">
                             {t("resume")}
                             <FiExternalLink />
                         </a>)
                         : (
                             <a className=' ur:animate-pulse ur:text-sm  ur:border border-myBlack ur:bg-myBlack ur:hover:bg-white ur:hover:text-myBlack ur:py-[2px] ur:px-2 text-white font-medium  flex items-center gap-2 rounded-md  '
-                                download={'Urfan-Karimli-eng.pdf'} href="/Urfan-Karimli-eng.pdf">
+                                download={'UrfanKarimliEn.pdf'} href="/UrfanKarimliEn.pdf">
                                 {t("resume")}
                                 <FiExternalLink />
                             </a>)
