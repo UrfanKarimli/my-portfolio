@@ -70,7 +70,7 @@ export default function Questions() {
 
 
     return (
-        <div className='z-20 sticky mx-5 lg:mx-9 flex items-start ur:gap-4  overflow-hidden  h-full min-h-screen'>
+        <div className='pt-10 lg:pt-20 mx-5 lg:mx-9 flex items-start ur:gap-4  overflow-hidden  h-full min-h-screen'>
             <article className='mt-5 hidden ur:block  w-56 '>
                 <nav className=' fixed top-20 left-5 lg:left-9  ' >
                     <ul className="bg-myWhite flex flex-col w-44 rounded-lg py-3">
@@ -86,7 +86,7 @@ export default function Questions() {
                     </ul>
                 </nav>
             </article>
-            <div className=' mt-5 mb-10 bg-myWhite rounded-lg py-4 px-4 w-full ur:py-8 ur:px-12 flex flex-col ' >
+            <div className='  mb-10 bg-myWhite rounded-lg py-4 px-4 w-full ur:py-8 ur:px-12 flex flex-col ' >
                 <h1 className='no-shadow ur:text-2xl text-center ur:text-start font-semibold text-myYellow '> {formatUrl(url)} <span className=' lowercase'>ilə bağlı suallar</span> </h1>
                 <ol className='flex flex-col items-start  my-1  '>
                     {questions?.map((item) => (
