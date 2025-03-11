@@ -12,7 +12,7 @@ export default {
     },
     screens: {
       'sm': '400px',
-      'ur': '630px',
+      'ur': '680px',
       'md': '768px',
       'lg': '1020px',
       'xl': '1220px',
