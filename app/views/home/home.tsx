@@ -57,7 +57,7 @@ export default function HomePage() {
 
 
     return (
-        <div className="z-20 sticky bottom-0 px-5 " >
+        <div className=" px-5 " >
             <div className=" hidden lg:block " onWheel={handleScroll}>
                 <Carousel
                     ref={carouselRef}
