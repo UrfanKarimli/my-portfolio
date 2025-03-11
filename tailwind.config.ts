@@ -14,7 +14,7 @@ export default {
       'sm': '400px',
       'ur': '630px',
       'md': '768px',
-      'lg': '1024px',
+      'lg': '1020px',
       'xl': '1220px',
     },
     container: {
@@ -37,6 +37,7 @@ export default {
         myYellow: "#ff4f08",
         myBlue: "#1E2F97",
         myGray: "#11201EA3",
+        listBg: "#EEE8AA"
       },
     },
   },

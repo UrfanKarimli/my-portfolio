@@ -9,6 +9,7 @@ import { NextIntlClientProvider } from "next-intl";
 export const metadata: Metadata = {
   title: "Urfan Karimli",
   description: "Urfan Karimli's personal website",
+  manifest: "/manifest.json",
 };
 
 export default async function RootLayout({ children,}: Readonly<{children: React.ReactNode;}>) {
@@ -21,7 +22,7 @@ export default async function RootLayout({ children,}: Readonly<{children: React
       <body className="font-roboto bg-myBlue overflow-x-hidden">
       <NextIntlClientProvider messages={messages}>
         <Header />
-        <main className="min-h-[90vh] relative">
+        <main className=" relative">
           {children}
           <ParticlesComponent id={'urfan'} />
         </main>

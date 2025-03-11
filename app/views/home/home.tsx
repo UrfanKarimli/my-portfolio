@@ -56,13 +56,12 @@ export default function HomePage() {
     };
 
 
-
     return (
         <div className="z-20 sticky bottom-0 px-5 " >
             <div className=" hidden lg:block " onWheel={handleScroll}>
                 <Carousel
                     ref={carouselRef}
-                    className="w-full h-[90vh]"
+                    className="w-full "
                     speed={1000}
                     infinite={false}
                 >
@@ -70,62 +69,62 @@ export default function HomePage() {
                         
                         <Landing />
                     </div>
-                    <div className="h-[90vh] flex items-center justify-center lg:px-9 overflow-x-hidden">
+                    <div className="h-[90vh] lg:px-9 overflow-x-hidden">
                         <motion.div
                             ref={ref2}
                             initial={{ rotateX: 180, rotateY: 180 }}
                             animate={inView2 ? { rotateX: 0, rotateY: 0 } : { rotateX: 180, rotateY: 180 }}
                             transition={{ duration: 1 }}
                             viewport={{ once: false }}
-                            className=""
+                            className="h-full flex items-center justify-center"
                         >
                             <DataPark />
                         </motion.div>
                     </div>
-                    <div className="h-[90vh] flex items-center justify-center lg:px-9 overflow-x-hidden">
+                    <div className="h-[90vh] lg:px-9 overflow-x-hidden">
                         <motion.div
                             ref={ref3}
                             initial={{ rotateY: 180 }}
                             animate={inView3 ? { rotateY: 0 } : { rotateY: 180 }}
                             transition={{ duration: 1 }}
                             viewport={{ once: false }}
-                            className=""
+                            className="h-full flex items-center justify-center"
                         >
                             <TapAz />
                         </motion.div>
                     </div>
-                    <div className="h-[90vh] flex items-center justify-center lg:px-9 overflow-x-hidden">
+                    <div className="h-[90vh] lg:px-9 overflow-x-hidden">
                         <motion.div
                             ref={ref4}
                             initial={{ rotateX: 180 }}
                             animate={inView4 ? { rotateX: 0 } : { rotateX: 180 }}
                             transition={{ duration: 1 }}
                             viewport={{ once: false }}
-                            className=""
+                            className="h-full flex items-center justify-center"
                         >
                             <BlankSpace />
                         </motion.div>
                     </div>
-                    <div className="h-[90vh] flex items-center justify-center lg:px-9 overflow-x-hidden ">
+                    <div className="h-[90vh] lg:px-9 overflow-x-hidden ">
                         <motion.div
                             ref={ref5}
                             initial={{ opacity: 0, scale: 0.5 }}
                             animate={inView5 ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }}
                             transition={{ duration: 1, }}
                             viewport={{ once: false }}
-                            className=""
+                            className="h-full flex items-center justify-center"
                         >
                             <VueDashboard />
                         </motion.div>
                     </div>
-                    <div className="h-[90vh] flex items-center justify-center lg:px-9 overflow-x-hidden">
+                    <div className="h-[90vh] lg:px-9 overflow-x-hidden">
                         <motion.div
                             ref={ref6}
                             initial={{ rotate: -45 }}
                             animate={inView6 ? { rotate: 0 } : { rotate: -45 }}
                             transition={{ duration: 0.5, }}
                             viewport={{ once: false }}
-                            className=""
+                            className="h-full flex items-center justify-center"
                         >
                             <VueCommerce />
                         </motion.div>
