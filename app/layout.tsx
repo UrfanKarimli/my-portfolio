@@ -5,7 +5,6 @@ import Header from "@/components/header";
 import ParticlesComponent from "@/components/particles-background";
 import { getLocale, getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
-import PwaInstallPrompt from "@/components/pwa-installer";
 
 export const metadata: Metadata = {
   title: "Urfan Karimli",
@@ -22,7 +21,6 @@ export default async function RootLayout({ children,}: Readonly<{children: React
     <html lang={locale}>
       <body className="font-roboto bg-myBlue overflow-x-hidden">
       <NextIntlClientProvider messages={messages}>
-        <PwaInstallPrompt/>
         <Header />
         <main className=" sticky z-20 bottom-0">
           {children}
