@@ -27,7 +27,6 @@ export default function Header() {
       <nav>
         <DesktopHeader />
         <BurgerMenu />
-
       </nav>
       <PwaInstallPrompt/>
 

@@ -3,6 +3,7 @@
 import { MoveDirection , OutMode  } from "@tsparticles/engine"
 import type { Container } from "@tsparticles/engine";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
+import Particle from "../practicle";
 import { useEffect, useMemo, useState } from "react";
 import { loadSlim } from "@tsparticles/slim"; 
 interface Props {
@@ -99,7 +100,7 @@ const ParticlesComponent = (props: Props) => {
     );
 
 
-    return <Particles id={props.id}  particlesLoaded={particlesLoaded} options={options} />;
+    return (<><Particles id={props.id}  particlesLoaded={particlesLoaded} options={options} /> <Particle/> </>);
 };
 
 export default ParticlesComponent;

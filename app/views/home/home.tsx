@@ -41,7 +41,6 @@ export default function HomePage() {
     const handleScroll = (event: React.WheelEvent) => {
         if (!carouselRef.current || isScrolling) return;
 
-
         if (Math.abs(event.deltaY) < scrollSensitivity) return;
 
         setIsScrolling(true);
