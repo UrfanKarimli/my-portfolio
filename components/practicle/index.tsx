@@ -11,7 +11,7 @@ export default function Particle() {
         watermark.style.position = "fixed";
         watermark.style.top = "1px";
         watermark.style.right = "32px";
-        watermark.style.opacity = "0.2";
+        watermark.style.opacity = "0.1";
         watermark.style.pointerEvents = "none";
         watermark.style.fontSize = "12px";
         watermark.style.color = "white";

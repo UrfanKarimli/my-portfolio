@@ -1,11 +1,8 @@
 // app/layout.tsx
 import { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/header";
-import ParticlesComponent from "@/components/particles-background";
 import { getLocale, getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
-import ScrollToTop from "@/components/scroll-to-top";
 
 export const metadata: Metadata = {
   title: "Urfan Karimli",
@@ -20,14 +17,11 @@ export default async function RootLayout({ children,}: Readonly<{children: React
 
   return (
     <html lang={locale}>
-      <body className="font-roboto bg-myBlue overflow-x-hidden">
+      <body >
       <NextIntlClientProvider messages={messages}>
-        <Header />
-        <main className=" sticky z-20 bottom-0 left-0 right-0">
-          <ScrollToTop/>
+        <main >
           {children}
         </main>
-        <ParticlesComponent id={'backGround'} />
         </NextIntlClientProvider>
       </body>
     </html>

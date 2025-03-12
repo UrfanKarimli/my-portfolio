@@ -41,11 +41,14 @@ export function useHeaderData() {
             // { name: 'General',url: 'general', href: '/questions/general', }
           ]
         },
-        // {
-        //   id: 2,
-        //   name: "test",
-        //   items: []
-        // }
+        {
+          id: 2,
+          name: "Texnologiyalar",
+          items: [
+            { name: 'PWA', url: 'pwa', href: '/technologyes/pwa', },
+            { name: 'Internationalization', url: 'pwa', href: '/technologyes/internationalization/app-router/with-routing', },
+          ]
+        }
       ]
     },
   ];
