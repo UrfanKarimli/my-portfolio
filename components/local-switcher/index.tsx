@@ -33,9 +33,6 @@ export default function LocaleSwitcher() {
         return <Spinner />
     }
 
-
-
-
     return (
 
         <div className=' flex flex-col ur:flex-row  items-center gap-4'>
