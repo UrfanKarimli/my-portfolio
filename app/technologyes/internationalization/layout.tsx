@@ -29,15 +29,19 @@ export default function TechLayout({ children }: { children: React.ReactNode }) 
                 <li className='text-xs ur:text-sm text-[#000]  '> <strong>Next-intl (Next.js üçün)</strong></li>
             </ul>
             <p className=' text-xs inline ur:text-sm text-[#000]  text-justify py-1 '> Mən bu kitabxanalardan nümunə olaraq `Next-intl`-i göstərəcəm </p>
-            <p className="font-bold text-myBlack text-sm ur:text-xl py-2 ">next-intl</p>
-            <p className=' text-xs inline ur:text-sm text-[#000]  text-justify py-1 '>Bildiyimiz kimi Next.js Router strukturu iki cür olur, Page Router və App Router. Bunun üçün də hər strukturun özünə məxsus konfiqurasiyası vardır. İlk olaraq başlayaq App Routerdən.</p>
+            <p className="font-bold text-myBlack text-sm ur:text-xl py-2 ">Next İntl</p>
+            <p className=' text-xs inline ur:text-sm text-[#000]  text-justify py-1 '>Bildiyimiz kimi Next.js Router strukturu iki cür olur, Page Router və App Router. Bunun üçün də hər strukturun özünə məxsus konfiqurasiyası vardır.</p>
+            <p className="font-bold text-myBlack text-sm ur:text-xl py-2 ">
+                <strong>QEYD:</strong> Bunu şəxsi təcrübəmdə istifadə etdiyim üsula əsasən yazmışam. Ola bilər ki, kitabxanada yeni dəyişikliklər edilib və ya Next-in yeni versiyaları ilə tam uyğunlaşmasın. Son dəyişiklikləri öyrənmək və daha çox məlumat almaq üçün kitabxananın rəsmi sənədlərinə
+                <a className=" text-blue-500 hover:text-myYellow" href="https://next-intl.dev/docs/getting-started"> buradan</a> daxil ola bilərsiniz.
+            </p>
+
             <nav className=" flex items-center gap-4 w-full my-2  border-b-4">
                 <Link
-                    className={`ur:text-xl translate-y-1 border-b-4 font-bold  ${pathname === "/technologyes/internationalization/app-router/with-routing" ? "text-myYellow   border-b-myYellow " : "text-myBlack hover:text-myYellow"
-                        }`}
+                    className={`ur:text-xl translate-y-1 border-b-4 font-bold  ${pathname.includes("/technologyes/internationalization/app-router") ? "text-myYellow border-b-myYellow" : "text-myBlack hover:text-myYellow"}`}
                     href={`/technologyes/internationalization/app-router/with-routing`}>App Roting</Link>
                 <Link
-                    className={`ur:text-xl translate-y-1 border-b-4 font-bold  ${pathname === "/technologyes/internationalization/page-router" ? "text-myYellow   border-b-myYellow " : "text-myBlack hover:text-myYellow"
+                    className={`ur:text-xl translate-y-1 border-b-4 font-bold  ${pathname.includes("/technologyes/internationalization/page-router") ? "text-myYellow   border-b-myYellow " : "text-myBlack hover:text-myYellow"
                         }`}
                     href={`/technologyes/internationalization/page-router`}>Page Roting</Link>
             </nav>

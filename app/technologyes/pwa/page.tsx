@@ -30,8 +30,8 @@ export default function page() {
                 <li className='text-xs ur:text-sm text-[#000]  '><strong>Responsive Dizayn: </strong> PWA-ların mobil və masaüstü cihazlarda işləməsi üçün dizaynın reaksiya verən (responsive) olması lazımdır.</li>
             </ul>
             <p className="font-bold text-myBlack text-sm ur:text-xl py-2 pl-5"> Next.js ilə yaradılmış bir layihədə PWA nümunəsi:</p>
-            <p className="font-medium text-myBlack text-xs ur:text-base py-2 ">1.  <mark className="px-1">npm install next-pwa </mark> ilə next-pwa quraşdırmaq</p>
-
+            <p className="font-medium text-myBlack text-xs ur:text-base py-2 ">1. Next-pwa quraşdırmaq</p>
+<CodeBlock language={'bash'} code={`npm install next-pwa `}/>
             <p className='font-bold text-myBlack text-xs ur:text-base py-2 '>2. next.config.js Konfiqurasiyası</p>
             <p className=' text-xs inline ur:text-sm text-[#000]  text-justify py-1 '>Layihənin next.config.js faylına aşağıdakı konfiqurasiyanı əlavə edin:</p>
             <CodeBlock language={'tsx'} code={`
@@ -68,7 +68,7 @@ module.exports = withPWA({
   ]
 }    `} />
 
-            <p className='font-bold text-myBlack text-xs ur:text-base py-2 '>4. İnstaller Popup yaratmaq (istəyə uyğun) </p>
+            <p className='font-bold text-myBlack text-xs ur:text-base py-2 '>4. Yükləmə Bildirişi (Download Popup) yaratmaq (istəyə uyğun) </p>
             <p className=' text-xs inline ur:text-sm text-[#000]  text-justify py-1 '>Əgər ilk daxil olan istifadəçiyə Tətbiqi yükləməsini təklif etmək istəsəniz bir Popup compoenenti yarada bilərsiniz</p>
 <CodeBlock language={'tsx'} code={`
 "use client"; // Next.js'de bu komponentin client-side işləməsini təmin edir

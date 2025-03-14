@@ -1,4 +1,6 @@
 {
     "title": "Page Not Found",
-    "description": "Oops! It looks like you've encountered a non-existent page!"
+    "description": "Oops! It looks like you've encountered a non-existent page!",
+    "homepage": "Return Home",
+    "prevPage": "Return Previous Page"
 }

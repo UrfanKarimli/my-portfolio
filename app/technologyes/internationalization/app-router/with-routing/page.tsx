@@ -6,17 +6,15 @@ import Image from 'next/image'
 export default function WithRouting() {
   return (
     <div>
-      <p className='font-bold text-xs inline ur:text-sm text-[#000]  text-justify py-1 '>1. İlk öncə paketi yükləyirik</p>
-      <CodeBlock language={'bash'} code={`
-npm install next-intl`} />
-      <p className='font-bold text-xs inline ur:text-sm text-[#000]  text-justify py-1 '>2. Bütün səhifə qovluqlarını [locale] içində yazırıq</p>
-      <Image className='ml-4' src={'/technologyes/locale-folder.png'} alt='' height={200} width={200} />
-      <p className='font-bold text-xs inline ur:text-sm text-[#000]  text-justify py-1 '>3. Next Confige faylında gərəkli dəyişiklikləri edirik</p>
+      <p className='font-bold text-sm inline ur:text-xl text-[#000]  text-justify py-1 '>1. İlk Öncə Paketi Yükləyirik</p>
+      <CodeBlock language={'bash'} code={`npm install next-intl`} />
+      <p className='font-bold text-sm inline ur:text-xl text-[#000]  text-justify py-1 '>2. Bütün Səhifə Qovluqlarını [locale] İçində Yazırıq</p>
+      <Image className='ur:ml-4 w-full ur:w-[200px]' src={'/technologyes/locale-folder.png'} alt='' height={200} width={200} />
+      <p className='font-bold text-sm inline ur:text-xl text-[#000]  text-justify py-1 '>3. `next.config.js` Faylında Gərəkli Dəyişiklikləri Edirik</p>
       <div className=' grid grid-cols-1 ur:grid-cols-2'>
         <div >
-          <p className="font-bold text-myBlack text-xs ur:text-base py-2 ">next.config.ts</p>
-          <CodeBlock language={'tsx'} code={`
-import {NextConfig} from 'next';
+          <code>next.config.ts</code>
+          <CodeBlock language={'tsx'} code={`import {NextConfig} from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
        
 const nextConfig: NextConfig = {};
@@ -25,9 +23,8 @@ const withNextIntl = createNextIntlPlugin();
 export default withNextIntl(nextConfig);`} />
         </div>
         <div>
-          <p className="font-bold text-myBlack text-xs ur:text-base py-2 ">next.config.js</p>
-          <CodeBlock language={'jsx'} code={`
-const createNextIntlPlugin = require('next-intl/plugin');
+          <code>next.config.js</code>
+          <CodeBlock language={'jsx'} code={`const createNextIntlPlugin = require('next-intl/plugin');
        
 const withNextIntl = createNextIntlPlugin();
  
@@ -36,11 +33,10 @@ const nextConfig = {};
 module.exports = withNextIntl(nextConfig);`} />
         </div>
       </div>
-      <p className='font-bold text-xs inline ur:text-sm text-[#000]  text-justify py-1 '>4. Sonra <mark>request.ts</mark> və <mark>routing.ts</mark> fayılları saxlamaq üçün, layihənin kök qovluğunda <mark> app </mark> qovluğu ilə eyni səviyyədə <mark>i18n </mark> qovluğu yaradırıq.</p>
-      <Image className='ml-4' src={'/technologyes/i18n-folder.png'} alt='' height={200} width={300} />
-      <p className='font-bold text-xs inline ur:text-sm text-[#000]  text-justify py-1 '>5.  <strong>routing.ts</strong> faylını yaradırıq. <mark>/i18n/routing.ts</mark> .</p>
-      <CodeBlock language={'tsx'} code={`
-import { defineRouting } from 'next-intl/routing';
+      <p className='font-bold text-sm inline ur:text-xl text-[#000]  text-justify py-1 '>4. Sonra <code>request.ts/</code> və <code>routing.ts/</code> Fayıllarını Saxlamaq Üçün Layihənin Kök Qovluğunda <code> app/</code> Qovluğu İlə Eyni Səviyyədə <code>i18n/</code> Qovluğu Yaradırıq.</p>
+      <Image className='ur:ml-4 w-full ur:w-[300px]' src={'/technologyes/i18n-folder.png'} alt='' height={200} width={300} />
+      <p className='font-bold text-sm inline ur:text-xl text-[#000]  text-justify py-1 '>5.  <strong>routing.ts</strong> Faylını Yaradırıq. <code>/i18n/routing.ts/</code> .</p>
+      <CodeBlock language={'tsx'} code={`import { defineRouting } from 'next-intl/routing';
 import { createNavigation } from 'next-intl/navigation';
 
 // Dil parametrlərini və yönləndirmə qaydalarını müəyyən edir
@@ -56,9 +52,8 @@ export const {
   usePathname, // Hal-hazırkı URL-in yol hissəsini əldə etməyə imkan verir
   useRouter,  // Next.js-in 'useRouter' hook-una bənzəyir, lakin lokalizasiya ilə işləyir
   getPathname // Lokalizasiyaya uyğun URL-i əldə etməyə imkan verir
-} = createNavigation(routing);
-    `} />
-      <p className='font-bold text-xs inline ur:text-sm text-[#000]  text-justify py-1 '>6. <strong>request.ts</strong> faylını yaradırıq. <mark>/i18n/request.ts</mark> .</p>
+} = createNavigation(routing);    `} />
+      <p className='font-bold text-sm inline ur:text-xl text-[#000]  text-justify py-1  '>6. <strong>request.ts</strong> Faylını Yaradırıq. <code>/i18n/request.ts/</code> .</p>
       <CodeBlock
         language="jsx"
         code={`import { getRequestConfig } from "next-intl/server"; 
@@ -74,12 +69,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
     locale,
     messages: (await import(\`../messages/\${locale}.json\`)).default,
   };
-});
-`}
+});`}
       />
-      <p className='font-bold text-xs inline ur:text-sm text-[#000]  text-justify py-1 '>7. <strong>middleware.ts</strong>. <mark> app </mark> qovluğu ilə eyni səviyyədə <mark>middleware.ts </mark>  faylını yaradırıq.</p>
-      <CodeBlock language={'jsx'} code={`
-import createMiddleware from 'next-intl/middleware'; // 'next-intl' üçün middleware yaradan funksiya
+      <p className='font-bold text-sm inline ur:text-xl text-[#000]  text-justify py-1 '>7. <strong>middleware.ts</strong>. <code> app/</code> Qovluğu İlə Eyni Səviyyədə <code>middleware.ts/</code>  Faylını Yaradırıq.</p>
+      <CodeBlock language={'jsx'} code={`import createMiddleware from 'next-intl/middleware'; // 'next-intl' üçün middleware yaradan funksiya
 import { routing } from './i18n/routing'; // Dil yönləndirmə ayarlarını gətirir
 
 // 'next-intl' üçün beynəlxalqlaşdırma middleware-i yaradır
@@ -87,17 +80,18 @@ export default createMiddleware(routing);
 
 export const config = {
   matcher: ['/', '/(az|en)/:path*'] // Middleware-i tətbiq edəcək URL-ləri müəyyən edir
-};
-          `} />
+};         `} />
 
-      <p className='font-bold text-xs inline ur:text-sm text-[#000]  text-justify py-1 '>8. Dil çeşidləri üçün olan JSON fayılları saxlamaq üçün, layihənin kök qovluğunda <mark> app </mark> qovluğu ilə eyni səviyyədə <mark>messages </mark> qovluğu yaradırıq.</p>
-      <Image className='ml-4' src={'/technologyes/message-folder.png'} alt='' height={200} width={300} />
-      <p className="font-bold text-xs inline ur:text-sm text-[#000]  text-justify py-1  ">9. Bu qovluğun içərisində <mark>en.json </mark>, <mark>az.json</mark> kimi fayllar yaradırıq və fayllarda fərqli dillərdə olan tərcümələri saxlayırıq.</p>
+      <p className='font-bold text-sm inline ur:text-xl text-[#000] text-justify py-1 '>
+        8. Dil Çeşidləri Üçün Olan JSON Fayllarını Saxlamaq Üçün, Layihənin Kök Qovluğunda, <code>app/</code> Qovluğu İlə Eyni Səviyyədə <code>messages/</code> Qovluğu Yaradırıq.
+        Bu Qovluğun İçərisində <code>en.json</code>, <code>az.json</code> Kimi Fayllar Yaradırıq Və Fayllarda Fərqli Dillərdə Olan Tərcümələri Saxlayırıq.
+      </p>
+
+      <Image className='ur:ml-4 w-full ur:w-[300px]' src={'/technologyes/message-folder.png'} alt='' height={200} width={300} />
       <div className=' grid grid-cols-1 ur:grid-cols-2'>
         <div >
-          <p className="font-normal text-myBlack text-xs ur:text-base ">messages/en.json</p>
-          <CodeBlock language={'json'} code={`
-{
+          <code >messages/en.json</code>
+          <CodeBlock language={'json'} code={`{
   "HomePage": {
     "title": "Hello world!",
     "about": "Go to the about page"
@@ -105,9 +99,8 @@ export const config = {
 }`} />
         </div>
         <div>
-          <p className="font-normal text-myBlack text-xs ur:text-base  ">messages/az.json</p>
-          <CodeBlock language={'json'} code={`
-{
+          <code>messages/az.json</code>
+          <CodeBlock language={'json'} code={`{
   "HomePage": {
     "title": "Salam dünya!",
     "about": "Haqqında səhifəsinə get"
@@ -115,9 +108,10 @@ export const config = {
 }`} />
         </div>
       </div>
-      <p className='font-bold text-xs inline ur:text-sm text-[#000]  text-justify py-1 '>10. Bütün bu konfigurasiyanın işləməsi üçün bütün layihəni <strong>NextIntlClientProvider </strong> ilə sarmalayırıq.</p>
-      <CodeBlock language={'jsx'} code={`
-// app/layout.tsx
+      <p className='font-bold text-sm inline ur:text-xl text-[#000] text-justify py-1 '>
+        9. Bütün Bu Konfigurasiyanın İşləməsi Üçün Bütün Layihəni <strong>NextIntlClientProvider</strong> İlə Sarmalayırıq.
+      </p>
+      <CodeBlock language={'jsx'} code={`// app/layout.tsx
 import { Metadata } from "next"; // Next.js üçün metadata dəstəyi
 import "./globals.css"; // Global CSS faylını daxil edir
 import { getLocale, getMessages } from "next-intl/server"; // Server tərəfində dil və tərcümə mesajlarını əldə etmək üçün funksiyalar
@@ -127,7 +121,6 @@ import { NextIntlClientProvider } from "next-intl"; // 'next-intl'-in client tə
 export const metadata: Metadata = {
   title: "Urfan Karimli", // Saytın başlığı
   description: "Urfan Karimli's personal website", // Saytın təsviri
-  manifest: "/manifest.json", // PWA dəstəyi üçün manifest faylı
 };
 
 // RootLayout - Bütün səhifələrə tətbiq olunan layout komponenti
@@ -149,11 +142,9 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
       </body>
     </html>
   );
-}
-    `} />
-      <p className='font-bold text-xs inline ur:text-sm text-[#000]  text-justify py-1 '>11. İstifadəsi</p>
-      <CodeBlock language={'jsx'} code={`
-import { useTranslations } from 'next-intl'; // 'next-intl'-dən tərcümə funksiyasını gətirir
+}   `} />
+      <p className='font-bold text-sm inline ur:text-xl text-[#000]  text-justify py-1  '>10. İstifadəsi</p>
+      <CodeBlock language={'tsx'} code={`import { useTranslations } from 'next-intl'; // 'next-intl'-dən tərcümə funksiyasını gətirir
 import { Link } from '@/i18n/navigation'; // Next.js üçün i18n yönləndirmə linkini istifadə edir
 
 export default function HomePage() {
@@ -168,13 +159,14 @@ export default function HomePage() {
       <Link href="/about">{t('about')}</Link>
     </div>
   );
-}
-    `} />
-      <p className="font-bold text-myBlack text-xs ur:text-base py-2 "> Dili dəyişmək üçün bir <strong>Local Switcher</strong> komponenti yaradırıq. Aşağıda sadə bir kod nümunəsi göstərəcəm</p>
+}    `} />
+      <p className="font-bold text-myBlack text-sm ur:text-xl py-2 ">
+        Dili Dəyişmək Üçün Bir <strong>Local Switcher</strong> Komponenti Yaradırıq. Aşağıda Sadə Bir Kod Nümunəsi Göstərəcəm.
+      </p>
+
       <CodeBlock
         language="jsx"
-        code={String.raw`
-'use client'; // Bu komponentin yalnız client tərəfində işləməsini təmin edir
+        code={String.raw`'use client'; // Bu komponentin yalnız client tərəfində işləməsini təmin edir
 
 import { useLocale } from 'next-intl'; // Hal-hazırda aktiv dili əldə etmək üçün hook
 import { useRouter, usePathname } from 'next/navigation'; // Router yönləndirmə funksiyaları
@@ -211,8 +203,7 @@ export default function LocaleSwitcher() {
             </select>
         </label>
     );
-}
-  `}
+}  `}
       />
 
     </div>
