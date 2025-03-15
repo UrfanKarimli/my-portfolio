@@ -1,27 +1,13 @@
-import React, { ReactNode, useState } from 'react'
+import React, {  useState } from 'react'
 import { motion } from "framer-motion"
 import CodeBlock from "@/components/code-block";
 import { BsPinAngleFill } from "react-icons/bs";
 import { FaPlus } from 'react-icons/fa6';
-
+import { TQuestion } from '../../types';
 interface ExpandedState {
     [key: number]: boolean
 }
 
-type TAnswer = {
-    type: string,
-    header?: string | ReactNode,
-    title?: string | ReactNode,
-    content: string ,
-    language?: string,
-    lists?: { list: string | ReactNode }[]
-}
-
-type TQuestion = {
-    id: number
-    question: string
-    answer: TAnswer[]
-}
 export default function List(item: TQuestion) {
     const [expanded, setExpanded] = useState<ExpandedState>({})
     const handleLinkClick = (id: number) => {

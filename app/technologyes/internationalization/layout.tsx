@@ -11,7 +11,7 @@ export default function TechLayout({ children }: { children: React.ReactNode }) 
         <div className='bg-myWhite w-full p-4 no-shadow'>
             <p className="font-bold text-myBlack text-sm ur:text-xl py-2 ">Çoxdilli funsionallıq(Internationalization) </p>
             <p className=' text-xs inline ur:text-sm text-[#000]  text-justify py-1 '>Coxdilli funksionallıq (Internationalization - i18n) frontend tətbiqlərində istifadəçilərə fərqli dillərdə məzmun təqdim etməyə imkan verir. Bu, qlobal istifadəçilərə uyğunlaşdırılmış interfeys və daha yaxşı istifadəçi təcrübəsi təmin etmək üçün vacibdir.</p>
-            <p className="font-bold text-myBlack text-xs ur:text-base py-2 ">Frontend-də Internationalization (i18n) Nədir?</p>
+            <p className="font-bold text-myBlack text-xs ur:text-base py-2 ">Frontend-də Internationalization (i18n) və Localization (l10n) Nədir?</p>
             <p className=' text-xs inline ur:text-sm text-[#000]  text-justify py-1 '>Internationalization (i18n), tətbiqin müxtəlif dillərə və mədəni kontekstlərə uyğunlaşdırılmasını asanlaşdıran bir yanaşmadır. Localization (l10n) isə müəyyən bir dil və mədəniyyətə uyğunlaşdırma prosesidir.</p>
             <p className=' text-xs inline ur:text-sm text-[#000]  text-justify py-1 '>i18n və l10n arasındakı fərq:</p>
             <ul className=' list-disc pl-5 [&>li]:py-[2px]'>
@@ -33,7 +33,7 @@ export default function TechLayout({ children }: { children: React.ReactNode }) 
             <p className=' text-xs inline ur:text-sm text-[#000]  text-justify py-1 '>Bildiyimiz kimi Next.js Router strukturu iki cür olur, Page Router və App Router. Bunun üçün də hər strukturun özünə məxsus konfiqurasiyası vardır.</p>
             <p className="font-bold text-myBlack text-sm ur:text-xl py-2 ">
                 <strong>QEYD:</strong> Bunu şəxsi təcrübəmdə istifadə etdiyim üsula əsasən yazmışam. Ola bilər ki, kitabxanada yeni dəyişikliklər edilib və ya Next-in yeni versiyaları ilə tam uyğunlaşmasın. Son dəyişiklikləri öyrənmək və daha çox məlumat almaq üçün kitabxananın rəsmi sənədlərinə
-                <a className=" text-blue-500 hover:text-myYellow" href="https://next-intl.dev/docs/getting-started"> buradan</a> daxil ola bilərsiniz.
+                <a className=" text-blue-500 hover:text-myYellow" target="_blank" href="https://next-intl.dev/docs/getting-started"> buradan</a> daxil olub baxmaq lazımdır.
             </p>
 
             <nav className=" flex items-center gap-4 w-full my-2  border-b-4">

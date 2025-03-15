@@ -1,17 +1,4 @@
-
-
-type TAnswer = {
-    type: string,
-    title?: string,
-    header?: string,
-    content: string,
-    language?: string
-}
-type TQuestion = {
-    id: number
-    question: string
-    answer: TAnswer[]
-}
+import { TQuestion } from "../../types"
 export const CssQuestions = {
     questions(): TQuestion[] {
         return [

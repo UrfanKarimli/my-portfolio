@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 export function useHeaderData() {
   const t = useTranslations("header");
 
+
   const menuItems = [
     {
       id: 1,
@@ -37,16 +38,16 @@ export function useHeaderData() {
             { name: 'JavaScript',url: 'java-script', href: '/questions/java-script', },
             { name: 'TypeScript',url: 'type-script', href: '/questions/type-script', },
             { name: 'React.js',url: 'react_js', href: '/questions/react_js', },
-            // { name: 'Next.js',url: 'next_js', href: '/questions/next_js', },
-            // { name: 'General',url: 'general', href: '/questions/general', }
+            { name: 'Next.js',url: 'next_js', href: '/questions/next_js', },
+            { name: t("general"), url: 'general', href: '/questions/general', }
           ]
         },
         {
           id: 2,
-          name: "Texnologiyalar",
+          name: t("techs"),
           items: [
-            { name: 'PWA', url: 'pwa', href: '/technologyes/pwa', },
-            { name: 'Internationalization', url: 'pwa', href: '/technologyes/internationalization/app-router/with-routing', },
+            { name: t("pwa"), url: 'pwa', href: '/technologyes/pwa', },
+            { name: t("intl"), url: 'pwa', href: '/technologyes/internationalization/app-router/with-routing', },
           ]
         }
       ]
