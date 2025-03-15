@@ -2,8 +2,12 @@
     "home": "Home",
     "about": "About me",
     "questions": "Questions",
+    "techs":"Technologies",
     "knowledge": "Knowledge",
     "hub": "hub",
+    "pwa": "Mobile app (PWA)",
+    "intl": "Internationalization",
+    "general": "General",
     "popupparagraph": "Install our app for a better experience!",
     "popupbutton": "Install"
 }

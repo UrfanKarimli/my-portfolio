@@ -56,14 +56,14 @@ export default function LocaleSwitcher() {
                 {
                     localeActive === 'az' ?
                         (
-                            <Tooltip title={`Azərbaycan dilinə keç`}>
+                            <Tooltip title={`Switch to English`}>
                                 <button onClick={() => onSelectChange('en')} className=' absolute' >
                                     <Image src={`/united-kingdom.png`} alt={`flag`} height={20} width={20} />
                                 </button>
                             </Tooltip>
 
                         ) : (
-                            <Tooltip title={`Switch to English`}>
+                            <Tooltip title={`Azərbaycan dilinə keç`}>
                             <button onClick={() => onSelectChange('az')} className=' absolute'>
                                 <Image src={`/azerbaijan.png`} alt={`flagg`} height={25} width={25} />
                             </button>

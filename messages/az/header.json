@@ -2,8 +2,12 @@
     "home": "Əsas səhifə",
     "about": "Haqqımda",
     "questions": "Suallar",
+    "techs":"Texnologiyalar",
     "knowledge": "Məlumat",
     "hub": "mərkəzi",
+    "pwa": "Mobil tətbiq (PWA)",
+    "intl": "Çoxdillilik",
+    "general": "Ümumi",
     "popupparagraph": "Daha yaxşı təcrübə üçün tətbiqi yüklə!",
     "popupbutton": "Yüklə"
 }
