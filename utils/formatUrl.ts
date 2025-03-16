@@ -18,6 +18,6 @@ export function formatUrl(url: string) {
         case 'css':
             return 'CSS ilə bağlı suallar';
         default:
-            return ""
+            return "Səhv linkə keçid etdin"
     }
 }

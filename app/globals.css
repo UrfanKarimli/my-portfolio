@@ -9,10 +9,6 @@
   overflow: visible !important;
 }
 
-/* .syntax-highlighter {
-  display: block !important;
-  overflow: scroll !important;
-} */
 
 .syntax-highlighter::-webkit-scrollbar {
   width: 0;

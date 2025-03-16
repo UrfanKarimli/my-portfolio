@@ -154,6 +154,7 @@ export default function HomePage() {
                 >
                     <TapAz />
                 </motion.div>
+                
                 <motion.div
                     ref={ref9}
                     initial={{ x: -300, opacity: 0 }}

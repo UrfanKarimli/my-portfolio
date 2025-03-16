@@ -59,13 +59,13 @@ export default function Questions() {
 
 
     return (
-        <div className='pt-16 lg:pt-20 mx-5 lg:mx-9 flex items-start ur:gap-4  overflow-hidden  h-full min-h-screen'>
+        <div className='pt-16 lg:pt-20 mx-5 lg:mx-9 flex items-start ur:gap-4  overflow-hidden   h-full min-h-screen'>
             <article className='mt-5 hidden ur:block  w-56 '>
                 <nav className=' fixed top-20 left-5 lg:left-9  ' >
                     <ul className="bg-myWhite flex flex-col w-44 rounded-lg py-3">
                         {interviewTopics.map((topic) => (
                             <li key={topic.url}>
-                                <Link className={`block no-shadow font-semibold text-sm ${url === topic.url ? 'text-myYellow hover:text-[#ff4e08c0] hover:bg-[#e3f7f4]' : 'text-myGray hover:text-myBlack hover:bg-[#eff3f3]'} rounded-md py-1 px-2`}
+                                <Link scroll={true} className={`block no-shadow font-semibold text-sm ${url === topic.url ? 'text-myYellow hover:text-[#ff4e08c0] hover:bg-[#e3f7f4]' : 'text-myGray hover:text-myBlack hover:bg-[#eff3f3]'} rounded-md py-1 px-2`}
                                     href={topic.href}
                                 >
                                     {topic.name}

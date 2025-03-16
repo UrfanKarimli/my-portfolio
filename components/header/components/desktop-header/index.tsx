@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useHeaderData } from "../useHeaderData";
+import { useHeaderData } from "../links";
 import { Dropdown } from "antd";
 import LocaleSwitcher from "@/components/local-switcher";
 import { FaChevronRight } from "react-icons/fa6";
