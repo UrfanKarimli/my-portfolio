@@ -6,6 +6,7 @@ import { RiTailwindCssFill } from 'react-icons/ri'
 import { SiShadcnui, SiTypescript } from 'react-icons/si'
 
 
+
 export default function DataPark() {
             const t = useTranslations("landing")
     

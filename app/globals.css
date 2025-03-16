@@ -36,6 +36,11 @@ body::-webkit-scrollbar {
   width: 0;
 }
 
+.no-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+
 #particles canvas {
   z-index: -1;
   height: 90%;

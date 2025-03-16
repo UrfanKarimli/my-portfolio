@@ -68,7 +68,7 @@ export default function HomePage() {
                         
                         <Landing />
                     </div>
-                    <div className="h-[90vh] lg:px-9 overflow-x-hidden">
+                    <div className="h-[90vh] lg:px-9 overflow-x-hidden no-scroll">
                         <motion.div
                             ref={ref2}
                             initial={{ rotateX: 180, rotateY: 180 }}
@@ -131,7 +131,7 @@ export default function HomePage() {
                 </Carousel>
             </div>
             <div className=" lg:hidden overflow-x-hidden">
-                <div className=" h-[40vh] sm:h-[50vh] ur:h-[70vh] w-full flex items-center justify-center ">
+                <div className=" h-[40vh] sm:h-[50vh]  w-full flex items-center justify-center ">
                     <Landing />
                 </div>
                 <motion.div
