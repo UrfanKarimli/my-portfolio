@@ -47,7 +47,9 @@ export function useHeaderData() {
           name: t("techs"),
           items: [
             { name: t("pwa"), url: 'pwa', href: '/technologyes/pwa', },
-            { name: t("intl"), url: 'pwa', href: '/technologyes/internationalization/app-router/with-routing', },
+            { name: t("intl"), url: 'technologyes', href: '/technologyes/internationalization/app-router/with-routing', },
+            { name: t("motions"), url: 'motions', href: '/technologyes/motions/framer-motions', },
+
           ]
         }
       ]

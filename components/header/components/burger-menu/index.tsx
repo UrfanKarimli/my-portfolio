@@ -1,5 +1,5 @@
 import { IoMenu } from "react-icons/io5";
-import { useHeaderData } from "../useHeaderData";
+import { useHeaderData } from "../links";
 import { Drawer } from "antd";
 import { useState } from "react";
 import Link from "next/link";
@@ -49,7 +49,7 @@ export default function BurgerMenu() {
                   item.submenu?.map((item) => (
                     openP &&
                     <div className='bg-[#dbeafe] flex flex-col ml-3   p-1' key={item.id}>
-                      <h4 onClick={() => handleLinkClick(item.id)}  className="text-myBlack no-shadow hover:text-[#ff4e08c0] font-semibold p-1  flex items-center justify-between " >
+                      <h4 onClick={() => handleLinkClick(item.id)} className="text-myBlack no-shadow hover:text-[#ff4e08c0] font-semibold p-1  flex items-center justify-between " >
                         {item.name}
                         <FaAngleDown className={`${expanded === item.id ? "rotate-180" : ""}`} />
                       </h4>
@@ -71,7 +71,7 @@ export default function BurgerMenu() {
                               key={item.href}
                               href={item.href}
                               className={`block no-shadow font-semibold hover:text-[#ff4e08c0] hover:bg-[#fff]  text-sm ${url === item.url ? 'text-myYellow  hover:bg-[#e3f7f4]' : 'text-myGray  '} rounded-md py-1 px-2`}
-                              
+
                             >
                               {item.name}
                             </Link>))}
