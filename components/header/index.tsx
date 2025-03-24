@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 import BurgerMenu from './components/burger-menu';
 import DesktopHeader from './components/desktop-header';
-import PwaInstallPrompt from '../pwa-installer';
+// import PwaInstallPrompt from '../pwa-installer';
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function Header() {
         <DesktopHeader />
         <BurgerMenu />
       </nav>
-      <PwaInstallPrompt/>
+      {/* <PwaInstallPrompt/> */}
 
     </header>
   );
