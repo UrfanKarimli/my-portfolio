@@ -13,7 +13,7 @@ export default function LocaleSwitcher() {
     const [isPending, startTransition] = useTransition();
     const router = useRouter();
 
-    const [localeActive, setLocaleActive] = useState('en');
+    const [localeActive, setLocaleActive] = useState('az');
 
     useEffect(() => {
         const storedLocale = Cookies.get('uk-locale');

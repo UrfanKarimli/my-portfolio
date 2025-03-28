@@ -20,14 +20,17 @@ export function useHeaderData() {
     },
     {
       id: 3,
-      name: <div  className="no-shadow text-base font-bold ur:font-normal ur:bg-myBlack p-[2px] pl-1 rounded-md text-myWhite cursor-pointer">
-        {t("knowledge")}
-        <span
-          
-          className="ml-px font-bold bg-[#ffa31a] text-myBlack px-[2px] py-px rounded-sm leading-normal">
-          {t("hub")}
-        </span>
-      </div>,
+      name: t("knowledge") === "Knowledge" ? (
+        <div className="no-shadow text-base font-bold ur:font-normal ur:bg-myBlack p-[2px] pl-1 rounded-md text-myWhite cursor-pointer">
+          {t("knowledge")}
+          <span className="ml-px font-bold bg-[#ffa31a] text-myBlack px-[2px] py-px rounded-sm leading-normal">
+            {t("hub")}
+          </span>
+        </div>
+      ) : (
+        <div className="ur:text-lg font-semibold ur:font-normal text-myWhite cursor-pointer text-center">{t("knowledge")} {t("hub")}</div>
+      ),
+      
       submenu: [
         {
           id: 1,
