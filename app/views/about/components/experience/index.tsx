@@ -13,7 +13,7 @@ export default function Experience() {
             <div className='relative w-full bg-myWhite flex flex-col gap-4  items-center  p-6  py-16 my-10  border border-myBlack rounded-2xl'>
                 <div className=' md:w-[560px] flex flex-col items-start gap-1'>
                     <h3 className=' flex flex-wrap text-xl ur:text-2xl text-myBlack font-bold'>Front-End Developer  <span className=' text-myBlack shadow-none ml-1 '>  @QSS Analytics</span></h3>
-                    <span className='text-xs sm:text-base text-[#1b1b1bbf]'>04/2024 - 12/2024 | {t("baku")},
+                    <span className='text-xs sm:text-base text-[#1b1b1bbf]'>01/2024 - 12/2024 | {t("baku")},
                     {t("azerbaijan")}
                     </span>
                     <span className='text-myBlack'>{t("achivement")}</span>
@@ -26,8 +26,8 @@ export default function Experience() {
                     </div>
                 </div>
                 <div className=' md:w-[560px] flex flex-col items-start gap-1'>
-                    <h3 className=' flex flex-wrap text-xl ur:text-2xl font-bold text-myBlack'>Front-End Developer Intern<span className=' text-myBlack ml-1'>@QSS Analytics</span></h3>
-                    <span className='text-xs sm:text-base text-[#1b1b1bbf]'>01/2024 - 04/2024 | {t("baku")},
+                    <h3 className=' flex flex-wrap text-xl ur:text-2xl font-bold text-myBlack'>Front-End Developer (Freelance)</h3>
+                    <span className='text-xs sm:text-base text-[#1b1b1bbf]'>02/2025 - &infin; | {t("baku")},
                     {t("azerbaijan")}
                     </span>
                     <span className='text-myBlack'>{t("achivement")}</span>
