@@ -56,7 +56,6 @@ export default function Landing() {
                             <h2 className='text-2xl ur:text-[35px] lg:text-[45px] font-light leading-none  text-myWhite font-roboto light-shadow'>Front-end Developer</h2>
                         </motion.div>
                     </div>
-
                     <div className="hidden lg:block  relative">
                         <motion.div
                             initial={{ rotateX: 90 }}
@@ -64,9 +63,9 @@ export default function Landing() {
                             transition={{ duration: 1, bounce: 0.1, delay: 0 }}
                             style={{ transformOrigin: "bottom" }}
                             viewport={{ once: false }}
-                            className=" absolute top-0 right-0 rounded-lg border-[8px] border-myWhite   h-[200px] w-[300px] overflow-hidden object-center object-cover"
+                            className=" absolute top-0 right-0 rounded-lg border-[6px] border-myWhite   h-[190px] w-[300px] overflow-hidden object-center object-cover"
                         >
-                            <Image src="/bannerimg1.jpeg" width={300} height={200} alt="Urfan Karimli" />
+                            <Image src="/react.webp" width={300} height={200} alt="Urfan Karimli" />
                         </motion.div>
                         <motion.div
                             initial={{ rotateY: 90 }}
@@ -74,9 +73,9 @@ export default function Landing() {
                             transition={{ duration: 1, bounce: 0.1, delay: 0.5 }}
                             style={{ transformOrigin: "right" }}
                             viewport={{ once: false }}
-                            className=" absolute bottom-2 right-2 rounded-lg border-[8px] border-myWhite h-[200px] w-[160px] overflow-hidden object-center object-cover"
+                            className=" absolute bottom-1 right-2 rounded-lg  h-[180px] w-[180px] overflow-hidden object-center object-cover"
                         >
-                            <Image src="/bannerimg4.jpeg" width={300} height={400} alt="Urfan Karimli" />
+                            <Image src="/JS.png" width={300} height={400} alt="Urfan Karimli" />
                         </motion.div>
                         <motion.div
                             initial={{ rotateX: 90 }}
@@ -84,9 +83,9 @@ export default function Landing() {
                             transition={{ duration: 1, bounce: 0.1, delay: 0.8 }}
                             style={{ transformOrigin: "top" }}
                             viewport={{ once: false }}
-                            className="absolute bottom-10 right-36 rounded-lg border-[8px] border-myWhite h-[200px] w-[200px] overflow-hidden object-center object-cover"
+                            className="absolute bottom-10 right-40 rounded-lg border-[5px] border-myWhite h-[200px] w-[200px] overflow-hidden object-center object-cover"
                         >
-                            <Image src="/bannerimg3.jpeg" width={300} height={400} alt="Urfan Karimli" />
+                            <Image src="/nextjs.png" width={300} height={400} alt="Urfan Karimli" />
                         </motion.div>
                         <motion.div
                             initial={{ rotateY: 90 }}
@@ -94,9 +93,9 @@ export default function Landing() {
                             transition={{ duration: 1, bounce: 0.1, delay: 1 }}
                             style={{ transformOrigin: "left" }}
                             viewport={{ once: false }}
-                            className=" absolute -bottom-28 right-52 rounded-lg border-[8px] border-myWhite h-[200px] w-[160px] overflow-hidden object-center object-cover"
+                            className=" absolute -bottom-28 right-52 rounded-lg border-[6px] border-myWhite h-[200px] w-[200px] overflow-hidden object-center object-cover"
                         >
-                            <Image src="/bannerimg2.jpeg" width={300} height={400} alt="Urfan Karimli" className=" scale-[2]" />
+                            <Image src="/typ.svg" width={200} height={200} alt="Urfan Karimli" className=" " />
                         </motion.div>
                     </div>
                 </div>
